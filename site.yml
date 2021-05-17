@@ -1,0 +1,21 @@
+---
+- name: User Add
+  hosts: all
+  become: true
+  tasks:
+    - name: username add
+      user:
+        name: "{{USER_NAME}}"
+    - name: password change
+      user:
+        name: "{{USER_NAME}}"
+        password: "{{ PASSWORD | password_hash('sha512')}}"
+    - name: sudoers.d add
+      copy:
+        content: |
+          %{{USER_NAME}} ALL=(ALL) NOPASSWD: ALL
+        dest: "/etc/sudoers.d/{{USER_NAME}}"
+        owner: root
+        group: root
+        mode: 0440
+        validate: "/usr/sbin/visudo -c -f '%s'"
