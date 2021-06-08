@@ -1,3 +1,5 @@
+
+
 # ansible playbook
   
   ansible은 IAC 도구입니다. 
@@ -5,6 +7,11 @@
   
   추가적으로 sshpass install을 하여 기본적으로 vault password를 통해 ssh 접속을 하게 합니다.
   
+
+
+
+
+
 
 # inventory
 
