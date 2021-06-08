@@ -7,20 +7,24 @@
   
   추가적으로 sshpass install을 하여 기본적으로 vault password를 통해 ssh 접속을 하게 합니다.
   
-
-
-
-
-
-
 # inventory
 
   ansible의 inventory는 앤서블 target을 지정해주는 역할을 합니다.
   인벤토리 파일인 hosts는 Github으로 관리하지 않겠습니다.
-  사내 저장소를 쓰거나 Github의 private 저장소를 쓴다면 Github으로 관리 합니다.
-  다만 여기에서의 예제는 Github public 저장소를 기준으로 하기 때문에 민감한 정보가 외부에 공개될 수 있습니다.
-  마찬가지로 이 예제를 진행하시는 분들도 정보 공개 위험이 있으니 안전하게 진행하겠습니다.
   
+  운영환경에서는 ansible controll machine ( ACM ) 내부에 script를 통해 엔서블-playbook 실행 시 
+  인벤토리를 /etc/ansible/${env: deploymentid}/ 디렉토리를 생성한후 
+  hosts 파일을 생성합니다.
+  
+  인벤토리는 기본적으로 blueprint 내부에서 설정 property를 사용합니다.
+  
+# host_variable 
+
+  inventory 안에 생성되는 host_vars 파일안에 타겟이 되는 vm의 아이피로 
+  디렉토리를 생성하며, 그안에 vault password와 ansible_user등 지역변수를 생성합니다.
+  
+  위에 설명한 vault pass, ansible_user 을 제외한 다른 변수들은
+  blueprint 안에서 , host_variable을 통해 deploy가 실행될시에 지역변수를 생성합니다.
   
 # 인증 방법
 
