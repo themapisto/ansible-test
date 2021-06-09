@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tomcat/role/tomcat/files/tomcat-initscript.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tomcat/role/tomcat/handlers/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tomcat/role/tomcat/tasks/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tomcat/role/tomcat/templates/iptables-save" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tomcat/role/tomcat/templates/server.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tomcat/role/tomcat/templates/tomcat-users.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/site.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/site.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/group_vars/tomcat-servers" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,15 +27,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -56,7 +48,8 @@
       <option name="presentableId" value="Default" />
       <updated>1623115447973</updated>
       <workItem from="1623115450399" duration="280000" />
-      <workItem from="1623115848815" duration="6686000" />
+      <workItem from="1623115848815" duration="8633000" />
+      <workItem from="1623200397917" duration="1649000" />
     </task>
     <servers />
   </component>
