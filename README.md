@@ -39,7 +39,6 @@
   
   kpkim@local-host$ ssh-copy-id -i ~/.ssh/id_rsa.pub 172.10.0.x 
   
-  <img src="https://user-images.githubusercontent.com/52188918/121293854-4bf22500-c927-11eb-8d70-b25f7dfa3b56.png"  width="700" height="370">
-
+  
 
 
