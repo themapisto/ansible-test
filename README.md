@@ -39,5 +39,7 @@
   
   kpkim@local-host$ ssh-copy-id -i ~/.ssh/id_rsa.pub 172.10.0.x 
   
-  
+  <img src="https://github.com/themapisto/ansible-test/issues/1#issue-915762597"  width="700" height="370">
+
+
 https://github.com/themapisto/ansible-test/issues/1#issue-915762597
