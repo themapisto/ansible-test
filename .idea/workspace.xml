@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mariadb/role/common/main.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/role/mariadb/handlers/main.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/role/mariadb/tasks/main.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/role/mariadb/templates/my.cnf.j2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/site.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tomcat/role/tomcat/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/role/tomcat/tasks/main.yml" afterDir="false" />
     </list>
@@ -50,7 +55,7 @@
       <updated>1623115447973</updated>
       <workItem from="1623115450399" duration="280000" />
       <workItem from="1623115848815" duration="8633000" />
-      <workItem from="1623200397917" duration="8960000" />
+      <workItem from="1623200397917" duration="13755000" />
     </task>
     <servers />
   </component>
