@@ -1,3 +1,0 @@
----
-- name: Firewalld service state
-  service: name=firewalld state=started enabled=yes

@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mariadb/role/common/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mariadb/role/mariadb/handlers/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mariadb/role/mariadb/tasks/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mariadb/role/mariadb/templates/my.cnf.j2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mariadb/site.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apache/roles/apache/tasks/main.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apache/site.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/roles/common/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/role/tomcat/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/role/tomcat/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb/role/common/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb/role/mariadb/handlers/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb/roles/mariadb/handlers/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb/role/mariadb/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb/roles/mariadb/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb/role/mariadb/templates/my.cnf.j2" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb/roles/mariadb/templates/my.cnf.j2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/role/tomcat/files/tomcat-initscript.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/roles/tomcat/files/tomcat-initscript.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/role/tomcat/handlers/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/roles/tomcat/handlers/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/role/tomcat/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/roles/tomcat/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/role/tomcat/templates/iptables-save" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/roles/tomcat/templates/iptables-save" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/role/tomcat/templates/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/roles/tomcat/templates/server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/role/tomcat/templates/tomcat-users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/roles/tomcat/templates/tomcat-users.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,13 +41,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -55,7 +65,8 @@
       <updated>1623115447973</updated>
       <workItem from="1623115450399" duration="280000" />
       <workItem from="1623115848815" duration="8633000" />
-      <workItem from="1623200397917" duration="13755000" />
+      <workItem from="1623200397917" duration="15809000" />
+      <workItem from="1623290866974" duration="7873000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,7 @@
+- name: example copying file with owner and permissions
+  copy:
+    src: /opt/apps/httpd-2.2.15.tar.gz
+    dest: /opt/httpd-2.2.15.tar.gz
+    owner: root
+    group: root
+    mode: 0644
