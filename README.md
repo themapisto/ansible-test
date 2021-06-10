@@ -40,5 +40,19 @@
   kpkim@local-host$ ssh-copy-id -i ~/.ssh/id_rsa.pub 172.10.0.x 
   
   
+  @ vault password 사용을 원할시에
+  
+    1. sshpass 를 설치하고
+    
+    (도큐먼트 참고) 하여 기본세팅
+    https://docs.vmware.com/en/vRealize-Automation/8.4/Using-and-Managing-Cloud-Assembly/GUID-9244FFDE-2039-48F6-9CB1-93508FCAFA75.html
+
+    2. 여기서 주의할점은 ansible.cfg 에서 
+    
+    [default]
+    ### 이부분에 vault 패스워드 경로를 적어야 한다
+    ### 나는 echo로 추가했는데 이경우에 [diff] 아래에 적용이 되어 에러를 발생한다.
+  
+  
 
 
