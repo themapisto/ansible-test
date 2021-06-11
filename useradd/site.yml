@@ -2,6 +2,18 @@
 - name: Test
   hosts: localhost
   tasks:
-    - name: Executing a command using the shell
-      command: ln -s /opt/mariadb-10.3.20 /usr/local/mysql
-    - name:
+
+    - name: Symbolic link
+      command: ln -s /opt/mariadb-10.3.20 /usr/local/maria
+
+    - name: groupadd
+      command: groupadd mysql
+
+    - name: useradd
+      command: useradd -g mysql mysql
+
+    - name: mysql folder owner change
+      command: chdir=/usr/local/maria chwon -R mysql .
+
+    - name: mysql folder group
+      command: chdir=/usr/local/maria chgrp -R mysql .
