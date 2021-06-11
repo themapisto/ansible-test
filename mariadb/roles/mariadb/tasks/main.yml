@@ -18,8 +18,11 @@
 - name: Symbolic link
   command: ln -s /opt/mariadb-10.3.20 /usr/local/maria
 
-- name: groupadd, useradd
-  command: groupadd mysql; useradd -g mysql mysql
+- name: groupadd
+  command: groupadd mysql
+
+- name: useradd
+  command: useradd -g mysql mysql
 
 - name: mysql folder owner change
   command: chdir=/usr/local/maria chwon -R mysql .
