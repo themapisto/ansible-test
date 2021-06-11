@@ -13,6 +13,24 @@
 - name: Extract archive
   command: chdir=/usr/share /bin/tar xvf /opt/mariadb-10.3.20.tar.gz -C /opt/ creates=/opt/mariadb-10.3.20
 
+### mariadb install
+
+- name: Symbolic link
+  command: ln -s /opt/mariadb-10.3.20 /usr/local/maria
+
+- name: groupadd, useradd
+  command: groupadd mysql; useradd -g mysql mysql
+
+- name: mysql folder owner change
+  command: chdir=/usr/local/maria chwon -R mysql .
+
+- name: mysql folder group
+  command: chdir=/usr/local/maria chgrp -R mysql .
+
+
+
+
+
 - name: Configure SELinux to start mysql on any port
   seboolean: name=mysql_connect_any state=true persistent=yes
 
