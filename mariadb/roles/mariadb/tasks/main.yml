@@ -25,7 +25,7 @@
   command: useradd -g mysql mysql
 
 - name: mysql folder owner change
-  command: chdir=/usr/local/maria chwon -R mysql .
+  command: chdir=/usr/local/maria chown -R mysql .
 
 - name: mysql folder group
   command: chdir=/usr/local/maria chgrp -R mysql .

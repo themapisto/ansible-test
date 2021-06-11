@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb/roles/mariadb/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb/roles/mariadb/tasks/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/useradd/site.yml" beforeDir="false" afterPath="$PROJECT_DIR$/useradd/site.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +40,7 @@
       <workItem from="1623115848815" duration="8633000" />
       <workItem from="1623200397917" duration="15809000" />
       <workItem from="1623290866974" duration="14756000" />
-      <workItem from="1623394995138" duration="1686000" />
+      <workItem from="1623394995138" duration="2059000" />
     </task>
     <servers />
   </component>
