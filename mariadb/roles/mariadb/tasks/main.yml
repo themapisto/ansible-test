@@ -3,8 +3,8 @@
 
 - name: example copying file with owner and permissions
   copy:
-    src: /opt/apps/mariadb-10.3.20.tar.gz
-    dest: /opt/mariadb-10.3.20.tar.gz
+    src: /opt/apps/mariadb-KP
+    dest: /opt/mariadb-KP
     owner: root
     group: root
     mode: 0644
