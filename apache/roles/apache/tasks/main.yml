@@ -7,7 +7,10 @@
     mode: 0644
 
 
-    # ./configure --prefix=/usr/local/apache2 --enable-modules=most --enable-mods-shared=all --enable-so --with-apr=/usr/local/apache/apr-1.7.0 --with-apr-util=/usr/local/apache/apr-util-1.6.1
+    # ./configure --prefix=/usr/local/apache2 --enable-modules=most
+    #--enable-mods-shared=all --enable-so
+    #--with-apr=/usr/local/apache/apr-1.7.0
+    #--with-apr-util=/usr/local/apache/apr-util-1.6.1
     #
     #
     #
