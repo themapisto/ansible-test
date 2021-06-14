@@ -9,6 +9,10 @@
     group: root
     mode: 0644
 
+# tar Extract archive
+# group, user add
+# group, owner change
+# Mysql Configuration file make
 
 - name: Extract archive
   command: chdir=/usr/share /bin/tar xvf /opt/mariadb-KP -C /opt/ creates=/opt/mariadb-10.3.20
@@ -42,6 +46,15 @@
 
 - name: Create MariaDB log file
   file: path=/var/log/mysqld.log state=touch owner=mysql group=mysql mode=0775
+
+- name: make Directory
+  command: chdir=/var/ mkdir mariadb
+
+- name: chown Directory
+  command: chdir=/var/ chown mysql mariadb
+
+- name: chgrp Directory
+  command: chdir=/var/ chgrp mysql mariadb
 
 - name: Create Mariadb pid file
   file: path=/var/mariadb/mysqld.pid state=touch owner=mysql group=mysql mode=0775
