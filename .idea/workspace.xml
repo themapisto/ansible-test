@@ -34,6 +34,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -63,7 +64,7 @@
       <workItem from="1623394995138" duration="2932000" />
       <workItem from="1623398974999" duration="3002000" />
       <workItem from="1623568013468" duration="1636000" />
-      <workItem from="1623571589711" duration="18689000" />
+      <workItem from="1623571589711" duration="20106000" />
     </task>
     <servers />
   </component>
