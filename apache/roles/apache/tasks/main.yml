@@ -2,6 +2,7 @@
 # apr / apr-util / pcre / httpd .tar.gz 준비
 
 
+
 - name: example copying file with owner and permissions
   copy:
     src: /opt/apps/httpd-2.2.15.tar.gz
@@ -11,8 +12,8 @@
     mode: 0644
 - name: example copying file with owner and permissions
   copy:
-    src: /opt/apps/apr-1.6.3.tar.gz
-    dest: /opt/apr-1.6.3.tar.gz
+    src: /opt/apps/apr-1.7.0.tar.gz
+    dest: /opt/apr-1.7.0.tar.gz
     owner: root
     group: root
     mode: 0644
@@ -37,7 +38,7 @@
   command: chdir=/usr/share /bin/tar xvf /opt/httpd-2.2.15.tar.gz -C /opt/ creates=/opt/httpd-2.2.15
 
 - name: Extract archive
-  command: chdir=/usr/share /bin/tar xvf /opt/apr-1.6.3.tar.gz -C /opt/ creates=/opt/apr-1.6.3
+  command: chdir=/usr/share /bin/tar xvf /opt/apr-1.7.0.tar.gz -C /opt/ creates=/opt/apr-1.7.0
 
 - name: Extract archive
   command: chdir=/usr/share /bin/tar xvf /opt/apr-util-1.6.1.tar.gz -C /opt/ creates=/opt/apr-util-1.6.1
@@ -47,6 +48,25 @@
 
 ### mv /usr/local/apache
 
-- name: mv folder to /usr/local/apache
-  command: chdir=/opt/
+- name: mkdir
+  command: chdir=/usr/local/ mkdir apache
 
+- name: mv folder to /usr/local/apache
+  command: chdir=/opt/ mv httpd-2.4.46/ /usr/local/apache
+
+- name: mv folder to /usr/local/apache
+  command: chdir=/opt/ mv apr-1.7.0/ /usr/local/apache
+
+- name: mv folder to /usr/local/apache
+  command: chdir=/opt/ mv apr-util-1.6.1/ /usr/local/apache
+
+- name: mv folder to /usr/local/apache
+  command: chdir=/opt/ mv pcre-8.41/ /usr/local/apache
+
+### install / compile
+
+- name: configure
+  command: chdir=/usr/local/apache/apr-1.7.0 ./configure
+
+- name: make, make install
+  command: chdir=/usr/local/apache/apr-1.7.0/ make && make install
