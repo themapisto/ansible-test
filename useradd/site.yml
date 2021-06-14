@@ -3,17 +3,5 @@
   hosts: localhost
   tasks:
 
-    - name: Symbolic link
-      command: ln -s /opt/mariadb-10.3.20 /usr/local/maria
-
-    - name: groupadd
-      command: groupadd mysql
-
-    - name: useradd
-      command: useradd -g mysql mysql
-
-    - name: mysql folder owner change
-      command: chdir=/usr/local/maria chown -R mysql .
-
-    - name: mysql folder group
-      command: chdir=/usr/local/maria chgrp -R mysql .
+    - name: groupadd && useradd
+      command: groupadd mysql2 && useradd -g mysql2 mysql2
