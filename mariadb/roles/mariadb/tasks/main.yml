@@ -63,7 +63,7 @@
   command: chdir=/var/lib/mysql/ rm -rf ib*
 
 - name: Start mysqld_safe
-  command: chdir=/opt/mariadb-10.3.20-linux-x86_64/bin/ ./mysqld_safe --user=mysql
+  command: chdir=/opt/mariadb-10.3.20-linux-x86_64/bin/ ./mysqld_safe --user=mysql &
 
 - name: insert firewalld rule
   firewalld: port={{ mysql_port }}/tcp permanent=true state=enabled immediate=yes
