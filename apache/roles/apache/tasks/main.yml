@@ -52,21 +52,21 @@
   command: chdir=/usr/local/ mkdir apache
 
 - name: mv folder to /usr/local/apache
-  command: chdir=/opt/ mv httpd-2.4.46/ /usr/local/apache
+  command: chdir=/opt/ mv httpd-2.2.15 /usr/local/apache
 
 - name: mv folder to /usr/local/apache
-  command: chdir=/opt/ mv apr-1.7.0/ /usr/local/apache
+  command: chdir=/opt/ mv apr-1.7.0 /usr/local/apache
 
 - name: mv folder to /usr/local/apache
-  command: chdir=/opt/ mv apr-util-1.6.1/ /usr/local/apache
+  command: chdir=/opt/ mv apr-util-1.6.1 /usr/local/apache
 
 - name: mv folder to /usr/local/apache
-  command: chdir=/opt/ mv pcre-8.41/ /usr/local/apache
+  command: chdir=/opt/ mv pcre-8.41 /usr/local/apache
 
 ### install / compile
 
 - name: configure
-  command: chdir=/usr/local/apache/apr-1.7.0 ./configure
+  command: chdir=/usr/local/apache/apr-1.7.0/ ./configure
 
 - name: make, make install
   command: chdir=/usr/local/apache/apr-1.7.0/ make && make install
