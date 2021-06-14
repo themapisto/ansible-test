@@ -1,3 +1,7 @@
+# yum install -y gcc / gcc ++ / make / pcre-devel
+# apr / apr-util / pcre / httpd .tar.gz 준비
+
+
 - name: example copying file with owner and permissions
   copy:
     src: /opt/apps/httpd-2.2.15.tar.gz
@@ -5,11 +9,44 @@
     owner: root
     group: root
     mode: 0644
+- name: example copying file with owner and permissions
+  copy:
+    src: /opt/apps/apr-1.6.3.tar.gz
+    dest: /opt/apr-1.6.3.tar.gz
+    owner: root
+    group: root
+    mode: 0644
+- name: example copying file with owner and permissions
+  copy:
+    src: /opt/apps/apr-util-1.6.1.tar.gz
+    dest: /opt/apr-util-1.6.1.tar.gz
+    owner: root
+    group: root
+    mode: 0644
+- name: example copying file with owner and permissions
+  copy:
+    src: /opt/apps/pcre-8.41.tar.gz
+    dest: /opt/pcre-8.41.tar.gz
+    owner: root
+    group: root
+    mode: 0644
 
-    # yum install -y gcc / gcc ++ / make / pcre-devel
-    # apr / apr-util / pcre / httpd .tar.gz 준비
-    #
-    #
-    #
-    #
-    #
+### tar unarchive
+
+- name: Extract archive
+  command: chdir=/usr/share /bin/tar xvf /opt/httpd-2.2.15.tar.gz -C /opt/ creates=/opt/httpd-2.2.15
+
+- name: Extract archive
+  command: chdir=/usr/share /bin/tar xvf /opt/apr-1.6.3.tar.gz -C /opt/ creates=/opt/apr-1.6.3
+
+- name: Extract archive
+  command: chdir=/usr/share /bin/tar xvf /opt/apr-util-1.6.1.tar.gz -C /opt/ creates=/opt/apr-util-1.6.1
+
+- name: Extract archive
+  command: chdir=/usr/share /bin/tar xvf /opt/pcre-8.41.tar.gz -C /opt/ creates=/opt/pcre-8.41
+
+### mv /usr/local/apache
+
+- name: mv folder to /usr/local/apache
+  command: chdir=/opt/
+
