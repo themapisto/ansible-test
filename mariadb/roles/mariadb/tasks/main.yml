@@ -43,8 +43,11 @@
 - name: Create MariaDB log file
   file: path=/var/log/mysqld.log state=touch owner=mysql group=mysql mode=0775
 
-- name: Start MariaDB Service
-  service: name=mariadb state=started enabled=yes
+- name: Create Mariadb pid file
+  file: path=/var/mariadb/mysqld.pid state=touch owner=mysql group=mysql mode=0775
+
+- name: Start mysqld_safe
+  command: chdir=/opt/mariadb-10.3.20-linux-x86_64 ./bin/mysqld_safe --user=mysql &
 
 - name: insert firewalld rule
   firewalld: port={{ mysql_port }}/tcp permanent=true state=enabled immediate=yes
