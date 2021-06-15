@@ -96,7 +96,7 @@
   # make &&  make install
 
 - name: configure
-  command: chdir=/opt/httpd-2.2.15 ./configure --prefix=/usr/local/apache2
+  command: chdir=/opt/httpd-2.2.15 ./configure --prefix=/usr/local/apache2 --with-apr=/usr/local/apr --with-apr-util=/usr/local/apr-util
     #--with-apr=/usr/local/apr --with-apr-util=/usr/local/apr-util
 
 - name: make && make install
