@@ -64,7 +64,7 @@
   command: chdir=/opt/apr-1.7.0 make install
 
 - name: configure
-  command: chdir=/opt/apr-util-1.6.1 ./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr
+  command: chdir=/opt/apr-util-1.6.1 ./configure --prefix=/usr/local/apr-util-1.6.1 --with-apr=/usr/local/apr
 
 - name: make, make install
   command: chdir=/opt/apr-util-1.6.1 make
@@ -96,7 +96,7 @@
   # make &&  make install
 
 - name: configure
-  command: chdir=/opt/httpd-2.2.15 ./configure --prefix=/usr/local/apache2 --with-apr=/usr/local/apr --with-apr-util=/usr/local/apr-util
+  command: chdir=/opt/httpd-2.2.15 ./configure --prefix=/usr/local/apache2 --with-apr=/usr/local/apr --with-apr-util=/usr/local/apr-util-1.6.1
     #--with-apr=/usr/local/apr --with-apr-util=/usr/local/apr-util
 
 - name: make && make install
