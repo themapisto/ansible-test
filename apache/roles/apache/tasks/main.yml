@@ -96,3 +96,7 @@
 - name: Update?  Mysql configuration file
   template: src=httpd.conf dest=/usr/local/apache2/conf/httpd.conf
 
+## service
+
+- name: service start
+  command: chdir=/usr/local/apache2/bin/httpd -k start
