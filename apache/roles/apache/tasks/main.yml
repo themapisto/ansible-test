@@ -52,18 +52,24 @@
 ### install / compile apr / apr-util
 
 ### yum install expat-devel 파일 반입 필요
+- name: yum install expat-devel
+  yum: name=expat-devel state=present
 
 - name: configure
   command: chdir=/opt/apr-1.7.0 ./configure --prefix=/usr/local/apr
 
 - name: make, make install
-  command: chdir=/opt/apr-1.7.0 make && make install
+  command: chdir=/opt/apr-1.7.0 make
+- name: make install
+  command: chdir=/opt/apr-1.7.0 make install
 
 - name: configure
   command: chdir=/opt/apr-util-1.6.1 ./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr
 
 - name: make, make install
-  command: chdir=/opt/apr-util-1.6.1 make && make install
+  command: chdir=/opt/apr-util-1.6.1 make
+- name: make, make install
+  command: chdir=/opt/apr-util-1.6.1 make install
 
 
   # cd /usr/local/src/pcre-8.41
@@ -76,7 +82,9 @@
   command: chdir=/opt/pcre-8.36 ./configure --prefix=/usr/local/pcre
 
 - name: make && make install
-  command: chdir=/opt/pcre-8.36 make && make install
+  command: chdir=/opt/pcre-8.36 make
+- name: make && make install
+  command: chdir=/opt/pcre-8.36 make install
 
 
 
@@ -92,7 +100,11 @@
     #--with-apr=/usr/local/apr --with-apr-util=/usr/local/apr-util
 
 - name: make && make install
-  command: chdir=/opt/httpd-2.2.15 make && make install
+  command: chdir=/opt/httpd-2.2.15 make
+
+- name: make && make install
+  command: chdir=/opt/httpd-2.2.15 make install
+
 
 - name: Update?  Mysql configuration file
   template: src=httpd.conf dest=/usr/local/apache2/conf/httpd.conf
