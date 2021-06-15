@@ -44,7 +44,7 @@
   command: chdir=/usr/share /bin/tar xvf /opt/apr-util-1.6.1.tar.gz -C /opt/ creates=/opt/apr-util-1.6.1
 
 - name: Extract archive
-  command: chdir=/usr/share /bin/tar xvf /opt/pcre-8.41.tar.gz -C /opt/ creates=/opt/pcre-8.36
+  command: chdir=/usr/share /bin/tar xvf /opt/pcre-8.41.tar.gz -C /opt/ creates=/opt/pcre-8.41
 
 
 
@@ -80,12 +80,12 @@
   # make && make install
 
 - name: configure
-  command: chdir=/opt/pcre-8.36 ./configure --prefix=/usr/local/pcre-8.36
+  command: chdir=/opt/pcre-8.41 ./configure --prefix=/usr/local/pcre-8.41
 
 - name: make && make install
-  command: chdir=/opt/pcre-8.36 make
+  command: chdir=/opt/pcre-8.41 make
 - name: make && make install
-  command: chdir=/opt/pcre-8.36 make install
+  command: chdir=/opt/pcre-8.41 make install
 
 
 
