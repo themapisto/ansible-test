@@ -108,8 +108,6 @@
   command: chdir=/opt/httpd-2.4.48 make install
 
 
-- name: Update?  Mysql configuration file
-  template: src=httpd.conf dest=/usr/local/apache2/conf/httpd.conf
 
 ## service
 
