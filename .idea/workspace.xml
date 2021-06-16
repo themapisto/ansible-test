@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache/roles/apache/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apache/roles/apache/tasks/main.yml" afterDir="false" />
-    </list>
+    <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +64,7 @@
       <workItem from="1623398974999" duration="3002000" />
       <workItem from="1623568013468" duration="1636000" />
       <workItem from="1623571589711" duration="23952000" />
-      <workItem from="1623660608188" duration="12422000" />
+      <workItem from="1623660608188" duration="12734000" />
     </task>
     <servers />
   </component>
