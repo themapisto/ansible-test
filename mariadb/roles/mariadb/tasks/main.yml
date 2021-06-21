@@ -13,12 +13,10 @@
 # group, user add
 # group, owner change
 # Mysql Configuration file make
+### mariadb install
 
 - name: Extract archive
   command: chdir=/usr/share /bin/tar xvf /opt/mariadb-KP -C /opt/ creates=/opt/mariadb-10.3.20
-
-### mariadb install
-
 
 - name: groupadd
   command: groupadd mysql
@@ -35,11 +33,14 @@
 - name: Create Mysql configuration file
   template: src=my.cnf.j2 dest=/etc/my.cnf
 
+## ncurse / libaio-dev
+## 템플릿 UBU
+
 - name: mysql_install
   command: chdir=/opt/mariadb-10.3.20-linux-x86_64 ./scripts/mysql_install_db --user=mysql --defaults-file=/etc/my.cnf
 
 
-###
+
 
 - name: Configure SELinux to start mysql on any port
   seboolean: name=mysql_connect_any state=true persistent=yes

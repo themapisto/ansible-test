@@ -1,0 +1,34 @@
+---
+
+- name: Install Java 1.7
+  apt: name=java-1.7.0-openjdk state=present
+
+
+
+
+# install tomcat
+
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: /etc/systemd/system/tomcat9.service.d
+    state: directory
+    mode: '0755'
+
+- name: Create file with sandbox overrides
+  copy:
+    dest: "/etc/systemd/system/tomcat9.service.d/override.conf"
+    content: |
+      [Service]
+      ReadWritePaths={{ fcrepo_home_dir }}/
+      ReadWritePaths={{ blazegraph_home_dir }}/data/
+      ReadWritePaths={{ tomcat9_home }}/fcrepo4-data/
+    mode: '0644'
+
+- name: restart daemon service
+  ansible.builtin.systemd:
+    daemon_reload: yes
+
+- name: start tomcat
+  service:
+    name: tomcat
+    state: started
