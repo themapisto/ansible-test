@@ -3,3 +3,4 @@ packages: openjdk-11-jdk
 tomcat7_service_name: tomcat
 https_port: 8001
 admin_username: kpkim
+admin_password: 1234
