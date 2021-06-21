@@ -6,7 +6,7 @@
     - tomcat7-config
     - tomcat7-install
 
-- include: "install - {{ ansible_os_family }}.yml"
+- include: "install-{{ ansible_os_family }}.yml"
   tags:
     - tomcat7
     - tomcat7-install
