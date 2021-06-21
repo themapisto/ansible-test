@@ -12,6 +12,7 @@
     - tomcat7-install
 
 - include: config.yml
+  when: "ansible_os_family == 'Debian'"
   tags:
     - tomcat7
     - tomcat7-config

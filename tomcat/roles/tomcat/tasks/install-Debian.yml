@@ -26,20 +26,20 @@
 
 
 - name: Symlink install directory
-  file: src=/opt/apache-tomcat-7.0.61 path= "{{__tomcat7_home}}" state=link
+  file: src=/opt/apache-tomcat-7.0.61 path= "{{ __tomcat7_home }}" state=link
 
 - name: add group "tomcat"
   group: name=tomcat
 
 - name: add user "tomcat"
-  user: name=tomcat group=tomcat home="{{__tomcat7_home}}" createhome=no
+  user: name=tomcat group=tomcat home="{{ __tomcat7_home }}" createhome=no
   become: True
   become_method: sudo
 
 
 
 - name: Change ownership of Tomcat installation
-  file: path="{{__tomcat7_home}}"  owner=tomcat group=tomcat state=directory recurse=yes
+  file: path="{{ __tomcat7_home }}"  owner=tomcat group=tomcat state=directory recurse=yes
 
 - name: Install Tomcat init script
   copy: src=tomcat-initscript.sh dest=/etc/init.d/tomcat mode=0755
