@@ -6,12 +6,12 @@
 
 - name: Define tomcat7_home
   set_fact:
-    tomcat9_home: "{{ __tomcat7_home }}"
+    tomcat7_home: "{{ __tomcat7_home }}"
   when: tomcat7_home is not defined
 
 - name: Define tomcat7_version
   set_fact:
-    tomcat9_version: "{{ __tomcat7_version }}"
+    tomcat7_version: "{{ __tomcat7_version }}"
   when:
     - tomcat7_version is not defined
     - __tomcat7_version is defined

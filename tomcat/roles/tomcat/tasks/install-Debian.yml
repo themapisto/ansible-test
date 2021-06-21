@@ -18,15 +18,11 @@
     mode: 0644
 
 - name: Extract archive
-  command: chdir=/usr/share /bin/tar xvf /opt/apache-tomcat-7.0.61.tar.gz -C /opt/ creates=/opt/apache-tomcat-7.0.61
+  command: chdir=/usr/share /bin/tar xvf /opt/apache-tomcat-7.0.61.tar.gz -C /opt/ creates=/"{{ __tomcat7_home }}"/apache-tomcat-7.0.61
 
 # /opt/apache-tomcat-7.0.61.tar.gz
 # tar xvf /opt/apache-tomcat-7.0.61.tar.gz -C /opt/
 # tar 추출 후 created folder           /opt/apache-tomcat-7.0.61
-
-
-- name: Symlink install directory
-  file: src=/opt/apache-tomcat-7.0.61 path= "{{ __tomcat7_home }}" state=link
 
 - name: add group "tomcat"
   group: name=tomcat
