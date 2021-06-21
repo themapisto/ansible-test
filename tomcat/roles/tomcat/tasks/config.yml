@@ -13,10 +13,10 @@
   template:
     src: tomcat-users.xml
     dest: "{{tomcat7_home}}/conf/tomcat-users.xml"
-    owner: "{{ tomcat7_server_user }}"
-    group: "{{ tomcat7_server_group }}"
+    owner: tocmat
+    group: tomcat
     mode: "640"
-  notify: restart tomcat7
+  notify: restart tomcat
 
 - name: start tomcat
   service:
