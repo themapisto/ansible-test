@@ -15,7 +15,7 @@
     dest: "{{ tomcat7_home }}/conf/tomcat-users.xml"
     owner: tocmat
     group: tomcat
-    mode: "640"
+    mode: "750"
   notify: restart tomcat
 
 - name: start tomcat
