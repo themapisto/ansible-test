@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/vars/Debian.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/roles/tomcat/vars/Debian.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/tasks/install-Debian.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/roles/tomcat/tasks/install-Debian.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +71,7 @@
       <workItem from="1623568013468" duration="1636000" />
       <workItem from="1623571589711" duration="23952000" />
       <workItem from="1623660608188" duration="24742000" />
-      <workItem from="1624237007959" duration="14843000" />
+      <workItem from="1624237007959" duration="15634000" />
     </task>
     <servers />
   </component>
