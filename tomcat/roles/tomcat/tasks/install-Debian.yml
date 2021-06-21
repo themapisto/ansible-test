@@ -1,34 +1,49 @@
 ---
 
 - name: Install Java 1.7
-  apt: name=java-1.7.0-openjdk state=present
-
+  apt:
+    name: "{{ packages }}"
+    state: present
+    vars:
+      packages:
+        - openjdk-11-jdk
 
 
 
 # install tomcat
 
-- name: Create a directory if it does not exist
-  ansible.builtin.file:
-    path: /etc/systemd/system/tomcat9.service.d
-    state: directory
-    mode: '0755'
-
-- name: Create file with sandbox overrides
+- name: example copying file with owner and permissions
   copy:
-    dest: "/etc/systemd/system/tomcat9.service.d/override.conf"
-    content: |
-      [Service]
-      ReadWritePaths={{ fcrepo_home_dir }}/
-      ReadWritePaths={{ blazegraph_home_dir }}/data/
-      ReadWritePaths={{ tomcat9_home }}/fcrepo4-data/
-    mode: '0644'
+    src: /opt/apps/apache-tomcat-7.0.61.tar.gz
+    dest: /opt/apache-tomcat-7.0.61.tar.gz
+    owner: root
+    group: root
+    mode: 0644
 
-- name: restart daemon service
-  ansible.builtin.systemd:
-    daemon_reload: yes
+- name: Extract archive
+  command: chdir=/usr/share /bin/tar xvf /opt/apache-tomcat-7.0.61.tar.gz -C /opt/ creates=/opt/apache-tomcat-7.0.61
 
-- name: start tomcat
-  service:
-    name: tomcat
-    state: started
+# /opt/apache-tomcat-7.0.61.tar.gz
+# tar xvf /opt/apache-tomcat-7.0.61.tar.gz -C /opt/
+# tar 추출 후 created folder           /opt/apache-tomcat-7.0.61
+
+
+- name: Symlink install directory
+  file: src=/opt/apache-tomcat-7.0.61 path=/usr/share/tomcat state=link
+
+- name: Change ownership of Tomcat installation
+  file: path=/usr/share/tomcat/ owner=tomcat group=tomcat state=directory recurse=yes
+
+- name: Configure Tomcat server
+  template: src=server.xml dest=/usr/share/tomcat/conf/
+  notify: restart tomcat
+
+- name: Configure Tomcat users
+  template: src=tomcat-users.xml dest=/usr/share/tomcat/conf/
+  notify: restart tomcat
+
+- name: Install Tomcat init script
+  copy: src=tomcat-initscript.sh dest=/etc/init.d/tomcat mode=0755
+
+- name: Start Tomcat
+  service: name=tomcat state=started enabled=yes
