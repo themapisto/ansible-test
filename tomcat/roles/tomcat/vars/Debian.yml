@@ -1,3 +1,3 @@
-__tomcat7_home: /var/lib/tomcat9
+__tomcat7_home: /var/lib/tomcat
 packages: openjdk-11-jdk
 tomcat7_service_name: tomcat
