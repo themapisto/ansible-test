@@ -39,8 +39,6 @@
   become: True
   become_method: sudo
 
-
-
 - name: Change ownership of Tomcat installation
   file: path="{{ __tomcat7_home }}"  owner=tomcat group=tomcat state=directory recurse=yes
 
