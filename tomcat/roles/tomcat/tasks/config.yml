@@ -13,9 +13,9 @@
   template:
     src: tomcat-users.xml
     dest: "{{ tomcat7_home }}/conf/tomcat-users.xml"
-    owner: tocmat
+    owner: tomcat
     group: tomcat
-    mode: "750"
+    mode: "640"
   notify: restart tomcat
 
 - name: start tomcat
