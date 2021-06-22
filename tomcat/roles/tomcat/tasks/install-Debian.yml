@@ -42,8 +42,36 @@
 - name: Change ownership of Tomcat installation
   file: path="{{ __tomcat7_home }}"  owner=tomcat group=tomcat state=directory recurse=yes
 
-- name: Install Tomcat init script
-  copy: src=tomcat-initscript.sh dest=/etc/init.d/tomcat mode=0755
 
-- name: Start Tomcat
-  service: name=tomcat state=started enabled=yes
+
+## tomcat-init script use
+
+
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: /etc/systemd/system/tomcat.service.d
+    state: directory
+    mode: '0755'
+
+
+
+- name: Create file with sandbox overrides
+  copy:
+    dest: "/etc/systemd/system/tomcat.service.d/override.conf"
+    content: |
+      [Service]
+      ReadWritePaths={{ fcrepo_home_dir}}/
+      ReadWritePaths={{ blazegraph_home_dir }}/data/ReadWrite
+      ReadWritePaths={{ tomcat7_home }}/fcrepo4-data/
+    mode: '0644'
+
+- name: restart daemon service
+  ansible.builtin.systemd:
+    daemon_reload: yes
+
+
+
+- name: start tomcat
+  service:
+    name: tomcat
+    state: started
