@@ -4,8 +4,8 @@ After=network.target
 
 [Service]
 Type=forking
-User=tomcat
-Group=tomcat
+User={{ tomcat_user }}
+Group={{ tomcat_group }}
 
 Environment=CATALINA_PID={{ tomcat7_home }}/{{ tomcat7_service_name }}.pid
 Environment=TOMCAT_JAVA_HOME=/usr/java/default
