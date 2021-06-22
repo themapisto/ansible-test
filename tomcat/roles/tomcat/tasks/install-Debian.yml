@@ -55,7 +55,7 @@
 
 
 - name: tomcat- init script template use
-  templage: src=tomcat.service.j2 dest=/etc/init.d/tomcat mode=0755
+  template: src=tomcat.service.j2 dest=/etc/init.d/tomcat mode=0755
   notify: restart tomcat
 
 - name: restart daemon service
