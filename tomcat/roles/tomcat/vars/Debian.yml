@@ -1,5 +1,5 @@
 __tomcat7_home: /var/lib/tomcat
-packages: Java-1.8.0-openjdk
+packages: openjdk-8-jdk
 tomcat7_service_name: tomcat
 https_port: 8001
 http_port: 8080
