@@ -51,7 +51,9 @@
 - name: restart daemon service
   ansible.builtin.systemd:
     daemon_reload: yes
-- name: start tomcat
-  service:
-    name: tomcat9
-    state: started
+
+- name: Install Tomcat init script
+  copy: src=tomcat-initscript.sh dest=/etc/init.d/tomcat mode=0755
+
+- name: Start Tomcat
+  service: name=tomcat state=started enabled=yes
