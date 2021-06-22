@@ -60,9 +60,8 @@
     dest: "/etc/systemd/system/tomcat.service.d/override.conf"
     content: |
       [Service]
-      ReadWritePaths={{ fcrepo_home_dir}}/
-      ReadWritePaths={{ blazegraph_home_dir }}/data/ReadWrite
-      ReadWritePaths={{ tomcat7_home }}/fcrepo4-data/
+      ReadWritePaths=/
+
     mode: '0644'
 
 - name: restart daemon service
