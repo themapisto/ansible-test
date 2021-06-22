@@ -1,7 +1,6 @@
-__tomcat7_home: /var/lib/tomcat
-packages: openjdk-11-jdk
 tomcat7_service_name: tomcat
 https_port: 8001
 http_port: 8080
 admin_username: tomcat
 admin_password: tomcat
+__tomcat7_home: /usr/share/tomcat

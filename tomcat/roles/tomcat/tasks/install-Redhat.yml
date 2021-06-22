@@ -6,7 +6,7 @@
   group: name=tomcat
 
 - name: add user "tomcat"
-  user: name=tomcat group=tomcat home=/usr/share/tomcat createhome=no
+  user: name=tomcat group=tomcat home={{ __tomcat7_home }} createhome=no
   become: True
   become_method: sudo
 
@@ -30,17 +30,17 @@
 
 
 - name: Symlink install directory
-  file: src=/opt/apache-tomcat-7.0.61 path=/usr/share/tomcat state=link
+  file: src=/opt/apache-tomcat-7.0.61 path="{{ __tomcat7_home }}" state=link
 
 - name: Change ownership of Tomcat installation
-  file: path=/usr/share/tomcat/ owner=tomcat group=tomcat state=directory recurse=yes
+  file: path="{{ __tomcat7_home }}" owner=tomcat group=tomcat state=directory recurse=yes
 
 - name: Configure Tomcat server
-  template: src=server.xml dest=/usr/share/tomcat/conf/
+  template: src=server.xml dest="{{ __tomcat7_home }}"/conf/
   notify: restart tomcat
 
 - name: Configure Tomcat users
-  template: src=tomcat-users.xml dest=/usr/share/tomcat/conf/
+  template: src=tomcat-users.xml dest="{{ __tomcat7_home }}"/conf/
   notify: restart tomcat
 
 - name: Install Tomcat init script
