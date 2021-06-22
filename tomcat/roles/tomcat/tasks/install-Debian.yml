@@ -54,15 +54,9 @@
     mode: '0755'
 
 
-
-- name: Create file with sandbox overrides
-  copy:
-    dest: "/etc/systemd/system/tomcat.service.d/override.conf"
-    content: |
-      [Service]
-      ReadWritePaths=/
-
-    mode: '0644'
+- name: tomcat- init script template use
+  templage: src=tomcat.service.j2 dest=/etc/init.d/tomcat mode=0755
+  notify: restart tomcat
 
 - name: restart daemon service
   ansible.builtin.systemd:
