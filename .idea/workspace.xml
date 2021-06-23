@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mariadb/roles/mariadb/tasks/config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/roles/mariadb/tasks/install.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/roles/mariadb/tasks/total.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/roles/mariadb/vars/Debian.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/roles/mariadb/vars/RedHat.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/templates/tomcat.service.j2" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/roles/tomcat/templates/tomcat.service.j2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb/roles/mariadb/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb/roles/mariadb/tasks/main.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +79,7 @@
       <workItem from="1623660608188" duration="24742000" />
       <workItem from="1624237007959" duration="19742000" />
       <workItem from="1624266374529" duration="15542000" />
-      <workItem from="1624409894423" duration="5766000" />
+      <workItem from="1624409894423" duration="9729000" />
     </task>
     <servers />
   </component>

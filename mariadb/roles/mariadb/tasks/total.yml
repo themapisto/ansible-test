@@ -1,0 +1,74 @@
+---
+# This playbook will install MariaDB and create db user and give permissions.
+
+- name: example copying file with owner and permissions
+  unarchive:
+    src: /opt/apps/{{ tarfile }}
+    dest: /opt/{{ tarfile }}
+    copy: yes
+    owner: root
+    group: root
+    mode: 0644
+
+
+# tar Extract archive
+# group, user add
+# group, owner change
+# Mysql Configuration file make
+### mariadb install
+
+- name: Extract archive
+  command: creates="{{ __mariadb_home }}" mv {{ tarfile } {{ __mariadb_home }}
+
+
+- name: groupadd
+  command: groupadd mysql
+
+- name: useradd
+  command: useradd -g mysql mysql
+
+- name: mysql folder owner change
+  command: chdir=/opt/mariadb-10.3.20-linux-x86_64 chown -R mysql .
+
+- name: mysql folder group change
+  command: chdir=/opt/mariadb-10.3.20-linux-x86_64 chgrp -R mysql .
+
+- name: Create Mysql configuration file
+  template: src=my.cnf.j2 dest=/etc/my.cnf
+
+## ncurse / libaio-dev
+## 템플릿 UBU
+
+- name: mysql_install
+  command: chdir=/opt/mariadb-10.3.20-linux-x86_64 ./scripts/mysql_install_db --user=mysql --defaults-file=/etc/my.cnf
+
+
+
+
+- name: Configure SELinux to start mysql on any port
+  seboolean: name=mysql_connect_any state=true persistent=yes
+
+- name: Create MariaDB log file
+  file: path=/var/log/mysqld.log state=touch owner=mysql group=mysql mode=0775
+
+- name: make Directory
+  command: chdir=/var/ mkdir mariadb
+
+- name: chown Directory
+  command: chdir=/var/ chown mysql mariadb
+
+- name: chgrp Directory
+  command: chdir=/var/ chgrp mysql mariadb
+
+- name: Create Mariadb pid file
+  file: path=/var/mariadb/mysqld.pid state=touch owner=mysql group=mysql mode=0775
+
+- name: Delete ibdata.*
+  command: chdir=/var/lib/mysql/ rm -rf ib*
+
+- name: Start mysqld_safe
+  command: chdir=/opt/mariadb-10.3.20-linux-x86_64/bin/ ./mysqld_safe --user=mysql &
+
+- name: insert firewalld rule
+  firewalld: port={{ mysql_port }}/tcp permanent=true state=enabled immediate=yes
+  ignore_errors: yes
