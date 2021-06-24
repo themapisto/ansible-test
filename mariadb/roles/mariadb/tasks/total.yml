@@ -34,10 +34,10 @@
   command: useradd -g mysql mysql
 
 - name: mysql folder owner change
-  command: chdir=/opt/mariadb-10.3.20-linux-x86_64 chown -R mysql .
+  command: chdir="{{ __mariadb_home }}" chown -R mysql .
 
 - name: mysql folder group change
-  command: chdir=/opt/mariadb-10.3.20-linux-x86_64 chgrp -R mysql .
+  command: chdir="{{ __mariadb_home }}" chgrp -R mysql .
 
 - name: Create Mysql configuration file
   template: src=my.cnf.j2 dest=/etc/my.cnf
@@ -46,7 +46,7 @@
 ## 템플릿 UBU
 
 - name: mysql_install
-  command: chdir=/opt/mariadb-10.3.20-linux-x86_64 ./scripts/mysql_install_db --user=mysql --defaults-file=/etc/my.cnf
+  command: chdir="{{ __mariadb_home }}" ./scripts/mysql_install_db --user=mysql --defaults-file=/etc/my.cnf
 
 
 
@@ -73,7 +73,7 @@
   command: chdir=/var/lib/mysql/ rm -rf ib*
 
 - name: Start mysqld_safe
-  command: chdir=/opt/mariadb-10.3.20-linux-x86_64/bin/ ./mysqld_safe --user=mysql &
+  command: chdir="{{ __mariadb_home }}" ./mysqld_safe --user=mysql &
 
 - name: insert firewalld rule
   firewalld: port={{ mysql_port }}/tcp permanent=true state=enabled immediate=yes
