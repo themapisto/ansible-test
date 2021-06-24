@@ -1,0 +1,125 @@
+# yum install -y gcc / gcc ++ / make / pcre-devel   --Redhat
+# apt install -y gcc / g++ / make                   --Ubuntu
+# zypper install -y gcc / g++ / make                --SUSE
+# apr / apr-util / pcre / httpd .tar.gz 준비
+- name: pcre-devel
+  yum: name=pcre-devel state=present
+
+
+# /apache/vars/apache.yml 경로 확인 필요
+- name: example copying file with owner and permissions
+  copy:
+    src: /opt/apps/httpd-2.4.48.tar.gz
+    ## TODO tarfile 경로 수정시 apache.yml 경로 수정
+    dest: "{{ __tarfile }}/httpd-2.4.48.tar.gz"
+    owner: root
+    group: root
+    mode: 0644
+- name: example copying file with owner and permissions
+  copy:
+    src: /opt/apps/apr-1.7.0.tar.gz
+    ## TODO tarfile 경로 수정시 apache.yml 경로 수정
+    dest: "{{ __tarfile }}/apr-1.7.0.tar.gz"
+    owner: root
+    group: root
+    mode: 0644
+- name: example copying file with owner and permissions
+  copy:
+    src: /opt/apps/apr-util-1.6.1.tar.gz
+    ## TODO tarfile 경로 수정시 apache.yml 경로 수정
+    dest: "{{ __tarfile }}/apr-util-1.6.1.tar.gz"
+    owner: root
+    group: root
+    mode: 0644
+- name: example copying file with owner and permissions
+  copy:
+    src: /opt/apps/pcre-8.41.tar.gz
+    ## TODO tarfile 경로 수정시 apache.yml 경로 수정
+    dest: "{{ __tarfile }}/pcre-8.41.tar.gz"
+    owner: root
+    group: root
+    mode: 0644
+
+### tar unarchive
+
+- name: Extract archive
+  command: chdir=/usr/share /bin/tar xvf "{{ __tarfile }}/httpd-2.4.48.tar.gz" -C "{{ __tarfile }}" creates="{{ __tarfile }}/httpd-2.4.48"
+
+- name: Extract archive
+  command: chdir=/usr/share /bin/tar xvf "{{ __tarfile }}/apr-1.7.0.tar.gz" -C "{{ __tarfile }}" creates="{{ __tarfile }}/apr-1.7.0"
+
+- name: Extract archive
+  command: chdir=/usr/share /bin/tar xvf "{{ __tarfile }}/apr-util-1.6.1.tar.gz" -C "{{ __tarfile }}" creates="{{ __tarfile }}/apr-util-1.6.1"
+
+- name: Extract archive
+  command: chdir=/usr/share /bin/tar xvf "{{ __tarfile }}/pcre-8.41.tar.gz" -C "{{ __tarfile }}" creates="{{ __tarfile }}/pcre-8.41"
+
+
+
+
+### install / compile apr / apr-util
+
+### yum install expat-devel 파일 반입 필요
+### ----- expat-devel 템플릿에 적용
+
+#- name: yum install expat-devel
+#  yum: name=expat-devel state=present
+
+- name: configure
+  command: chdir="{{ __tarfile }}/apr-1.7.0" ./configure --prefix="{{ __makefile }}/apr"
+
+- name: make, make install
+  command: chdir="{{ __tarfile }}/apr-1.7.0" make
+- name: make install
+  command: chdir="{{ __tarfile }}/apr-1.7.0" make install
+
+- name: configure
+  command: chdir="{{ __tarfile }}/apr-util-1.6.1" ./configure --prefix="{{ __makefile }}/apr-util" --with-apr="{{ __makefile }}/apr"
+
+- name: make, make install
+  command: chdir="{{ __tarfile }}/apr-util-1.6.1" make
+- name: make, make install
+  command: chdir="{{ __tarfile }}/apr-util-1.6.1" make install
+
+
+  # cd /usr/local/src/pcre-8.41
+
+  # ./configure --prefix=/usr/local/src/apr-util-1.6.1 --with-apr=/usr/local/src/apr-1.6.3
+
+  # make && make install
+
+- name: configure
+  command: chdir="{{ __tarfile }}/pcre-8.41" ./configure --prefix="{{ __makefile }}/pcre"
+
+- name: make && make install
+  command: chdir="{{ __tarfile }}/pcre-8.41" make
+- name: make && make install
+  command: chdir="{{ __tarfile }}/pcre-8.41" make install
+
+
+
+
+  # cd /usr/local/src/httpd-2.4.29
+
+  # ./configure --prefix=/usr/local/apache2 --enable-modules=most --enable-mods-shared=all --enable-so --with-apr=/usr/local/src/apr-1.6.3 --with-apr-util=/usr/local/src/apr-util-1.6.1
+
+  # make &&  make install
+
+- name: configure
+  command: chdir="{{ __tarfile }}/httpd-2.4.48" ./configure --prefix="{{ __apache2_home }}" --with-apr="{{ __makefile }}/apr" --with-apr-util="{{ __makefile }}/apr-util" --with-pcre="{{ __makefile }}/pcre"
+    #--with-apr=/usr/local/apr --with-apr-util=/usr/local/apr-util
+
+- name: make && make install
+  command: chdir="{{ __tarfile }}/httpd-2.4.48" make
+
+- name: make && make install
+  command: chdir="{{ __tarfile }}/httpd-2.4.48" make install
+
+
+
+## service
+- name: configuration echo Servername
+  command: echo 'ServerName 127.0.0.1:80' >> "{{ __apache2_home }}/conf/httpd.conf"
+
+- name: service start
+  command: chdir="{{ __apache2_home }}/bin/httpd" -k start
