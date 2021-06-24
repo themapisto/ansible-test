@@ -65,4 +65,4 @@
   command: chdir=/etc/init.d update-rc.d tomcat defaults
 
 - name: service tomcat start
-  commnad: service tomcat start
+  command: service tomcat start
