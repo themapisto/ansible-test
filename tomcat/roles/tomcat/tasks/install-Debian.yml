@@ -54,17 +54,15 @@
     dest: /etc/init.d/tomcat
     owner: tomcat
     group: tomcat
-    mode: "640"
+    mode: "755"
   notify: restart tomcat
 
 
-- name: restart daemon service
-  ansible.builtin.systemd:
-    daemon_reload: yes
+- name: tomcat service register
+  command: chdir=/etc/init.d chmod 755 tomcat
 
+- name: tomcat update-rc.d tomcat
+  command: chdir=/etc/init.d update-rc.d tomcat defaults
 
-
-- name: start tomcat
-  service:
-    name: tomcat
-    state: started
+- name: service tomcat start
+  commnad: service tomcat start
