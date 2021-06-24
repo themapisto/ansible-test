@@ -1,3 +1,5 @@
 __src_tarfile: /opt/apps/mariadb-KP
-__tarfile: /opt/mariadb-KP
+__dest_tarfile: /opt/
+__tarfile: mariadb-KP
+
 __mariadb_home: /usr/local/mariadb
