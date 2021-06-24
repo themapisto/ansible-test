@@ -58,6 +58,8 @@
   template: src=tomcat.initscript.sh dest=/etc/init.d/tomcat mode=0755
   notify: restart tomcat
 
+
+
 - name: restart daemon service
   ansible.builtin.systemd:
     daemon_reload: yes
