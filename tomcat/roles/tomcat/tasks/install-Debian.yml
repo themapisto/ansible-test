@@ -47,11 +47,9 @@
 ## tomcat-init script use
 
 
-- name: Create a directory if it does not exist
-  ansible.builtin.file:
-    path: /etc/systemd/system/tomcat.service.d
-    state: directory
-    mode: '0755'
+- name: Configure Tomcat server
+  template: src=server.xml dest="{{ __tomcat7_home }}"/conf/
+  notify: restart tomcat
 
 
 - name: tomcat- init script template use

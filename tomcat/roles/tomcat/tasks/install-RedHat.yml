@@ -39,13 +39,8 @@
   template: src=server.xml dest="{{ __tomcat7_home }}"/conf/
   notify: restart tomcat
 
-- name: Configure Tomcat users
-  template: src=tomcat-users.xml dest="{{ __tomcat7_home }}"/conf/
-  notify: restart tomcat
-
-- name: tomcat- init script template use
-  template: src=tomcat.initscript.sh dest=/etc/init.d/tomcat mode=0755
-  notify: restart tomcat
+- name: Install Tomcat init script
+  copy: src=tomcat-initscript.sh dest=/etc/init.d/tomcat mode=0755
 
 - name: Start Tomcat
   service: name=tomcat state=started enabled=yes
