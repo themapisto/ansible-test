@@ -58,9 +58,6 @@
   notify: restart tomcat
 
 
-- name: tomcat service register
-  command: chdir=/etc/init.d chmod 755 tomcat
-
 - name: tomcat update-rc.d tomcat
   command: chdir=/etc/init.d update-rc.d tomcat defaults
 
