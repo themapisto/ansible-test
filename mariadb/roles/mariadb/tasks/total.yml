@@ -3,7 +3,7 @@
 
 - name: example copying file with owner and permissions
   unarchive:
-    src: "{{ __src_tarfile }}
+    src: "{{ __src_tarfile }}"
     dest: "{{ __tarfile }}"
     copy: yes
     owner: root
