@@ -17,8 +17,6 @@
 # Mysql Configuration file make
 ### mariadb install
 
-- name: Extract archive
-  command: chdir=/opt/ tar xzvf "{{ __tarfile }}" -C /opt/ creates=/opt/mariadb
 
 - name: Simbolic link
   file:
