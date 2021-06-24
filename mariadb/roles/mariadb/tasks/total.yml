@@ -3,8 +3,8 @@
 
 - name: example copying file with owner and permissions
   unarchive:
-    src: /opt/apps/"{{ __tarfile }}"
-    dest: /opt/"{{ __tarfile }}"
+    src: "{{ __src_tarfile }}
+    dest: "{{ __tarfile }}"
     copy: yes
     owner: root
     group: root
@@ -18,8 +18,14 @@
 ### mariadb install
 
 - name: Extract archive
-  command: creates="{{ __mariadb_home }}" mv "{{ tarfile }" "{{ __mariadb_home }}"
+  command: chdir=/opt/ tar xzvf "{{ __tarfile }}" -C /opt/ creates=/opt/mariadb
 
+- name: Simbolic link
+  file:
+    src: /opt/mariadb
+    path: "{{ __mariadb_home }}"
+    state: link
+  become: yes
 
 - name: groupadd
   command: groupadd mysql
