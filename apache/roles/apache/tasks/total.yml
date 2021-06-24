@@ -2,8 +2,8 @@
 # apt install -y gcc / g++ / make                   --Ubuntu
 # zypper install -y gcc / g++ / make                --SUSE
 # apr / apr-util / pcre / httpd .tar.gz 준비
-- name: pcre-devel
-  yum: name=pcre-devel state=present
+#- name: pcre-devel
+#  yum: name=pcre-devel state=present
 
 
 # /apache/vars/apache.yml 경로 확인 필요
@@ -62,7 +62,7 @@
 ### yum install expat-devel 파일 반입 필요
 ### ----- expat-devel 템플릿에 적용
 
-- name: yum install expat-devel
+#- name: yum install expat-devel
 #  yum: name=expat-devel state=present
 
 - name: configure

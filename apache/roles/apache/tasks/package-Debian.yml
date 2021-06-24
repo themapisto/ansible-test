@@ -1,0 +1,18 @@
+# apt install -y gcc / g++ / make                   --Ubuntu
+# apr / apr-util / pcre / httpd .tar.gz 준비
+- name: expat
+  apt:
+    name: libexpat1
+    state: present
+
+- name: expat-devel
+  apt:
+    name: libexpat-devel
+    state: present
+
+### install / compile apr / apr-util
+
+### yum install expat-devel 파일 반입 필요
+
+#- name: yum install expat-devel
+#  yum: name=expat-devel state=present
