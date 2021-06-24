@@ -3,3 +3,4 @@ __dest_tarfile: /opt/
 __tarfile: mariadb-KP
 
 __mariadb_home: /usr/local/mariadb
+mysql_port: 13306
