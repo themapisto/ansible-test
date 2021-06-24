@@ -49,7 +49,7 @@
 
 
 - name: tomcat- init script template use
-  templates:
+  template:
     src: tomcat-initscript.sh
     dest: /etc/init.d/tomcat
     owner: tomcat
