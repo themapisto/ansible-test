@@ -47,15 +47,15 @@
 ## tomcat-init script use
 
 
-- name: Configure Tomcat server
-  template: src=server.xml dest="{{ __tomcat7_home }}"/conf/
-  notify: restart tomcat
-
 
 - name: tomcat- init script template use
-  template: src=tomcat.initscript.sh dest=/etc/init.d/tomcat mode=0755
+  template:
+    src: tomcat-initscript.sh
+    dest: /etc/init.d/tomcat
+    owner: tomcat
+    group: tomcat
+    mode: "640"
   notify: restart tomcat
-
 
 
 - name: restart daemon service
