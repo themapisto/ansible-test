@@ -4,6 +4,12 @@
 # apr / apr-util / pcre / httpd .tar.gz 준비
 #- name: pcre-devel
 #  yum: name=pcre-devel state=present
+
+- name: upgrade all packages
+  yum:
+    name: '*'
+    state: latest
+
 - name: pcre-devel
   yum: name=pcre-devel state=present
   when: "ansible_os_family == 'Redhat'"
@@ -67,18 +73,19 @@
 - name: yum install expat-devel
   yum: name=expat-devel state=present
 
-- name: configure
+- name: apr configure
   command: chdir="{{ __tarfile }}/apr-1.7.0" ./configure --prefix="{{ __makefile }}/apr"
 
-- name: make, make install
+- name: apr make
   command: chdir="{{ __tarfile }}/apr-1.7.0" make
-- name: make install
+
+- name: apr make install
   command: chdir="{{ __tarfile }}/apr-1.7.0" make install
 
-- name: configure
+- name: apr -util configure
   command: chdir="{{ __tarfile }}/apr-util-1.6.1" ./configure --prefix="{{ __makefile }}/apr-util" --with-apr="{{ __makefile }}/apr"
 
-- name: make, make install
+- name: apr -util make
   command: chdir="{{ __tarfile }}/apr-util-1.6.1" make
 - name: make, make install
   command: chdir="{{ __tarfile }}/apr-util-1.6.1" make install
