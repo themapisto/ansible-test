@@ -4,7 +4,9 @@
 # apr / apr-util / pcre / httpd .tar.gz 준비
 #- name: pcre-devel
 #  yum: name=pcre-devel state=present
-
+- name: pcre-devel
+  yum: name=pcre-devel state=present
+  when: "ansible_os_family == 'Redhat'"
 
 # /apache/vars/apache.yml 경로 확인 필요
 - name: example copying file with owner and permissions
