@@ -1,8 +1,13 @@
 ---
+
 - name: Install JAVA 1.7
-  zypper:
-    name: java-1_7_0-openjdk state=present
-  when: "ansible_os_family == 'Suse'"
+  unarchive:
+    src: "{{ __src_tarfile }}"
+    dest: "{{ __dest_tarfile }}"
+    copy: yes
+    owner: root
+    group: root
+    mode: 0644
 
 - name: add group "tomcat"
   group: name=tomcat

@@ -8,3 +8,6 @@ admin_username: tomcat
 admin_password: tomcat
 tomcat_user: tomcat
 tomcat_group: tomcat
+
+__src_tarfile: /opt/apps/jdk-1.7.0.tar.gz
+__dest_tarfile: /opt/jdk-1.7.0.tar.gz
