@@ -9,7 +9,7 @@
     mode: 0644
 
 - name: Unarchive java
-  commnad: chdir=/opt/ tar -zxvf jdk-7u80-linux-x64.tar.gz
+  command: chdir=/opt/ tar -zxvf jdk-7u80-linux-x64.tar.gz
 
 - name: add group "tomcat"
   group: name=tomcat
