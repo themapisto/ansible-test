@@ -1,8 +1,8 @@
 ---
-
-- name: Install Java 1.7
-  yum: name=java-1.7.0-openjdk state=present
-  when: "ansible_os_family == 'Redhat'"
+- name: Install JAVA 1.7
+  zypeper:
+    name: java-1.7.0-openjdk state=present
+  when: "ansible_os_family == 'Suse'"
 
 - name: add group "tomcat"
   group: name=tomcat

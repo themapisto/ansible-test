@@ -1,0 +1,10 @@
+__tomcat7_home: /usr/share/tomcat
+__java_home: /usr/lib/jvm/java-8-openjdk-amd64
+packages: openjdk-8-jdk
+tomcat7_service_name: tomcat
+https_port: 8001
+http_port: 8080
+admin_username: tomcat
+admin_password: tomcat
+tomcat_user: tomcat
+tomcat_group: tomcat
