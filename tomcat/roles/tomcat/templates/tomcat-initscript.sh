@@ -39,6 +39,7 @@ tomcat_pid() {
         echo `ps -fe | grep $CATALINA_BASE | grep -v grep | tr -s " "|cut -d" " -f2`
 }
 
+
 start() {
   pid=$(tomcat_pid)
   if [ -n "$pid" ]
@@ -50,11 +51,14 @@ start() {
     #ulimit -n 100000
     #umask 007
     #/bin/su -p -s /bin/sh tomcat
-
+        if [ `user_exists $TOMCAT_USER` = "1" ]
+        then
+                su $TOMCAT_USER -c $CATALINA_HOME/bin/startup.sh
+        else
                 sh $CATALINA_HOME/bin/startup.sh
-
+        fi
         status
-
+  fi
   return 0
 }
 
@@ -62,7 +66,7 @@ status(){
           pid=$(tomcat_pid)
           if [ -n "$pid" ]; then echo -e "\e[00;32mTomcat is running with pid: $pid\e[00m"
           else echo -e "\e[00;31mTomcat is not running\e[00m"
-
+          fi
 }
 
 stop() {
@@ -85,10 +89,10 @@ stop() {
     if [ $count -gt $kwait ]; then
       echo -n -e "\n\e[00;31mkilling processes which didn't stop after $SHUTDOWN_WAIT seconds\e[00m"
       kill -9 $pid
-
+    fi
   else
     echo -e "\e[00;31mTomcat is not running\e[00m"
-
+  fi
 
   return 0
 }
@@ -98,7 +102,7 @@ user_exists(){
         echo "1"
         else
                 echo "0"
-
+        fi
 }
 
 case $1 in
