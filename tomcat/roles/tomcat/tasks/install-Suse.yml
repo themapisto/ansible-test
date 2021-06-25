@@ -1,9 +1,10 @@
 ---
 
+
 - name: Install JAVA 1.7
   unarchive:
     src: "{{ __src_tarfile }}"
-    dest: "{{ __dest_tarfile }}"
+    dest: /opt/
     copy: yes
     owner: root
     group: root
