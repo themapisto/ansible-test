@@ -1,14 +1,15 @@
 ---
 
-
-- name: Install JAVA 1.7
-  unarchive:
-    src: "{{ __src_tarfile }}"
-    dest: /opt/
-    copy: yes
+- name: Copy java
+  copy:
+    src: /opt/apps/jdk-7u80-linux-x64.tar.gz
+    dest: /opt/jdk-7u80-linux-x64.tar.gz
     owner: root
     group: root
     mode: 0644
+
+- name: Unarchive java
+  commnad: chdir=/opt/ tar -zxvf jdk-7u80-linux-x64.tar.gz
 
 - name: add group "tomcat"
   group: name=tomcat

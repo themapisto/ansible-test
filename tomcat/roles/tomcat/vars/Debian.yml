@@ -1,5 +1,7 @@
 __tomcat7_home: /usr/share/tomcat
-__java_home: /usr/lib/jvm/java-8-openjdk-amd64
+__java_home: /opt/jdk1.7.0_80
+
+
 packages: openjdk-8-jdk
 tomcat7_service_name: tomcat
 https_port: 8001
