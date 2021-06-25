@@ -1,7 +1,7 @@
 ---
 - name: Install JAVA 1.7
   zypper:
-    name: java-1.7.0-openjdk state=present
+    name: java-1_7_0-openjdk state=present
   when: "ansible_os_family == 'Suse'"
 
 - name: add group "tomcat"
