@@ -1,6 +1,6 @@
 ---
 - name: Install JAVA 1.7
-  zypeper:
+  zypper:
     name: java-1.7.0-openjdk state=present
   when: "ansible_os_family == 'Suse'"
 
