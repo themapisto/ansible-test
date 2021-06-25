@@ -3,11 +3,7 @@
   include_vars: "{{ ansible_os_family }}.yml"
   tags: apache
 
-- name : Apache2 Dependency Package Install
-  include_tasks: "package-{{ ansible_os_family }}.yml"
-  tags:
-    - apache
-    - apache-package
+
     
 - name: Install Apache2, Configure Apache2
   include_tasks: total.yml
