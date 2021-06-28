@@ -58,4 +58,4 @@
   notify: restart tomcat
 
 - name: Start Tomcat
-  command: chdir="{{ __tomcat7_home }"/bin/ ./startup.sh
+  command: chdir="{{ __tomcat7_home }}"/bin/ ./startup.sh

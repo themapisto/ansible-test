@@ -20,7 +20,7 @@
 
 - name: Simbolic link
   file:
-    src: /opt/mariadb-10.3.20-linux-x86_64
+    src: /opt/mariadb-10.3.20
     path: "{{ __mariadb_home }}"
     state: link
   become: yes
