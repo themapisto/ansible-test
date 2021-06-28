@@ -20,8 +20,8 @@
 
 - name: Simbolic link
   file:
-    src: {{ __mariadb_src }}
-    path: {{ __mariadb_home }}
+    src: "{{ __mariadb_src }}"
+    path: "{{ __mariadb_home }}"
     state: link
   become: yes
 
@@ -63,9 +63,6 @@
 
 - name: chgrp Directory
   command: chdir=/var/lib chgrp mysql mysql
-
-- name: Create /var/run/mariadb
-  command: chdir=/var/run mkdir mariadb
 
 
 
