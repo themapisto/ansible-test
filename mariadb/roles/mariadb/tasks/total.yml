@@ -55,16 +55,16 @@
   file: path=/var/log/mysqld.log state=touch owner=mysql group=mysql mode=0775
 
 - name: make Directory
-  command: chdir=/var/ mkdir mariadb
+  command: chdir=/var/lib mkdir mysql
 
 - name: chown Directory
-  command: chdir=/var/ chown mysql mariadb
+  command: chdir=/var/lib chown mysql mysql
 
 - name: chgrp Directory
-  command: chdir=/var/ chgrp mysql mariadb
+  command: chdir=/var/lib chgrp mysql mysql
 
 - name: Create Mariadb pid file
-  file: path=/var/mariadb/mysqld.pid state=touch owner=mysql group=mysql mode=0775
+  file: path=/var/lib/mysql/mysqld.pid state=touch owner=mysql group=mysql mode=0775
 
 - name: mysql_install
   command: chdir={{ __mariadb_home }} ./scripts/mysql_install_db --user=mysql --defaults-file=/etc/my.cnf
