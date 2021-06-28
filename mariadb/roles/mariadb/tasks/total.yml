@@ -57,11 +57,13 @@
 - name: make Directory
   command: chdir=/var/lib mkdir mysql
 
-- name: chown Directory
+- name: chown Directoryexit
   command: chdir=/var/lib chown mysql mysql
 
 - name: chgrp Directory
   command: chdir=/var/lib chgrp mysql mysql
+
+-
 
 - name: Create Mariadb pid file
   file: path=/var/run/mariadb/mysqld.pid state=touch owner=mysql group=mysql mode=0775

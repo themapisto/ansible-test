@@ -1,6 +1,5 @@
-__src_tarfile: /opt/apps/mariadb-KP
-__dest_tarfile: /opt/
-__tarfile: mariadb-KP
+__src_tarfile: /opt/apps/mariadb-10.3.20.tar.gz
+__dest_tarfile: /opt/mariadb-10.3.20.tar.gz
 
 __mariadb_home: /usr/local/mariadb
 mysql_port: 13306
