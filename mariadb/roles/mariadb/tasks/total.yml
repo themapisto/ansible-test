@@ -71,7 +71,7 @@
 
 - name: Permission all script
   file:
-    path: "{{ __mariadb_home}}"
+    path: "{{ __mariadb_home }}"/bin
     mode: 0755
 
 
