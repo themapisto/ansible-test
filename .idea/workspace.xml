@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/site.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/roles/mariadb/tasks/total.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb/roles/mariadb/tasks/total.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/roles/tomcat/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/useradd/site.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/site.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +20,7 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1te2tFaEkth1tWYiUNFd1W9buir" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -34,17 +33,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tomcat/roles/tomcat/tasks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/mysql" />
       <recent name="$PROJECT_DIR$/tomcat/roles/tomcat/tasks" />
       <recent name="$PROJECT_DIR$/tomcat/roles/tomcat/vars" />
       <recent name="$PROJECT_DIR$/tomcat/roles/tomcat/files" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/tomcat/roles/tomcat/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -86,7 +85,7 @@
       <workItem from="1624409894423" duration="47884000" />
       <workItem from="1624841147343" duration="7406000" />
       <workItem from="1624852002319" duration="11507000" />
-      <workItem from="1625126058906" duration="1516000" />
+      <workItem from="1625126058906" duration="2477000" />
     </task>
     <servers />
   </component>
