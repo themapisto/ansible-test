@@ -4,7 +4,7 @@ __mysql_packages:
   - mariadb
   - MariaDB-server
   - MariaDB-client
-  - MariaDB-libs
+  - mariadb-libs
   - MySQL-python
   - perl-DBD-MySQL
 __mysql_slow_query_log_file: /var/log/mysql-slow.log
