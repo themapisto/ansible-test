@@ -1,4 +1,20 @@
 ---
+- name: make Directory
+  command: chdir=/var/run mkdir mariadb
+
+- name: chown Directoryexit
+  command: chdir=/var/run chown mysql mariadb
+
+- name: chgrp Directory
+  command: chdir=/var/run chgrp mysql mariadb
+
+
+
+- name: Create Mariadb pid file
+  file: path=/var/run/mariadb/mysqld.pid state=touch owner=mysql group=mysql mode=0775
+
+
+
 - name: Ensure MySQL packages are installed.
   yum:
     name: "{{ mysql_packages }}"
