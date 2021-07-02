@@ -2,9 +2,105 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/site.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/main.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/package-Debian.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/package-RedHat.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/total.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apache_binary/roles/apache/templates/httpd.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apache_binary/roles/apache/vars/Debian.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apache_binary/roles/apache/vars/RedHat.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apache_binary/site.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/.ansible-lint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/.github/FUNDING.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/.github/stale.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/.github/workflows/ci.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/.github/workflows/release.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/.yamllint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/defaults/main.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/handlers/main.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/meta/main.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/molecule/default/converge.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/molecule/default/molecule.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/tasks/configure.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/tasks/databases.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/tasks/main.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/tasks/replication.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/tasks/secure-installation.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/tasks/setup-Archlinux.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/tasks/setup-Debian.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/tasks/setup-RedHat.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/tasks/users.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/tasks/variables.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/templates/my.cnf.j2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/templates/root-my.cnf.j2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/templates/user-my.cnf.j2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/vars/Archlinux.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/vars/Debian-10.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/vars/Debian.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/vars/RedHat-7.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb/mysql/vars/RedHat-8.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb_binary/site.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb/roles/common/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb_binary/roles/common/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb/roles/mariadb/handlers/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/handlers/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb/roles/mariadb/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb/roles/mariadb/tasks/total.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/tasks/total.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb/roles/mariadb/templates/my.cnf.j2" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/templates/my.cnf.j2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb/roles/mariadb/vars/Debian.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/vars/Debian.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb/roles/mariadb/vars/RedHat.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/vars/RedHat.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb/site.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb/site.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/.ansible-lint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/.github/FUNDING.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/.github/stale.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/.github/workflows/ci.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/.github/workflows/release.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/.yamllint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/defaults/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/handlers/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/meta/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/molecule/default/converge.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/molecule/default/molecule.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/tasks/configure.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/tasks/databases.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/tasks/replication.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/tasks/secure-installation.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/tasks/setup-Archlinux.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/tasks/setup-Debian.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/tasks/setup-RedHat.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/tasks/users.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/tasks/variables.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/templates/my.cnf.j2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/templates/root-my.cnf.j2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/templates/user-my.cnf.j2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/vars/Archlinux.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/vars/Debian-10.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/vars/Debian.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/vars/RedHat-7.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/vars/RedHat-8.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/files/tomcat-initscript.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/files/tomcat-initscript.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/handlers/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/handlers/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/tasks/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/tasks/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/tasks/define-home.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/tasks/define-home.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/tasks/install-Debian.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/tasks/install-Debian.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/tasks/install-RedHat.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/tasks/install-RedHat.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/tasks/install-Suse.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/tasks/install-Suse.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/templates/iptables-save" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/templates/iptables-save" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/templates/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/templates/server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/templates/tomcat-initscript.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/templates/tomcat-initscript.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/templates/tomcat-users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/templates/tomcat-users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/vars/Debian.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/vars/Debian.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/vars/RedHat.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/vars/RedHat.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/roles/tomcat/vars/Suse.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/vars/Suse.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat/site.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/site.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,17 +129,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/apache" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apache" />
+      <recent name="$PROJECT_DIR$/mariadb" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/mysql" />
       <recent name="$PROJECT_DIR$/tomcat/roles/tomcat/tasks" />
-      <recent name="$PROJECT_DIR$/tomcat/roles/tomcat/vars" />
-      <recent name="$PROJECT_DIR$/tomcat/roles/tomcat/files" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -51,13 +147,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -85,7 +183,8 @@
       <workItem from="1624409894423" duration="47884000" />
       <workItem from="1624841147343" duration="7406000" />
       <workItem from="1624852002319" duration="11507000" />
-      <workItem from="1625126058906" duration="2477000" />
+      <workItem from="1625126058906" duration="3556000" />
+      <workItem from="1625188828816" duration="1108000" />
     </task>
     <servers />
   </component>
