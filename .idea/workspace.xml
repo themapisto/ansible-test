@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="" />
+    <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,15 +31,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mariadb/mysql" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mariadb" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mariadb" />
       <recent name="$PROJECT_DIR$/mariadb/mysql" />
       <recent name="$PROJECT_DIR$/apache" />
-      <recent name="$PROJECT_DIR$/mariadb" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/mysql" />
     </key>
@@ -84,7 +86,7 @@
       <workItem from="1624841147343" duration="7406000" />
       <workItem from="1624852002319" duration="11507000" />
       <workItem from="1625126058906" duration="3556000" />
-      <workItem from="1625188828816" duration="12576000" />
+      <workItem from="1625188828816" duration="13978000" />
     </task>
     <servers />
   </component>
