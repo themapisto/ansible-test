@@ -4,6 +4,8 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/apache" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/apache-role" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mariadb" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mariadb/mysql" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/mysql" vcs="Git" />
   </component>
 </project>
