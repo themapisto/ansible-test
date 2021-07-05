@@ -1,41 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/mariadb/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/defaults/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/handlers/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/meta/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/molecule/common/init.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/molecule/common/init1.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/molecule/common/init2.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/molecule/common/mariadb.bats" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/molecule/default/converge.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/molecule/default/molecule.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/molecule/default/verify.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/molecule/vagrant/converge.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/molecule/vagrant/molecule.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/molecule/vagrant/verify.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/tasks/auth-unix-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/tasks/config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/tasks/databases.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/tasks/install.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/tasks/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/tasks/root-password.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/tasks/users.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/templates/etc_logrotate.d_mysql.j2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/templates/etc_my.cnf.d_custom.cnf.j2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/templates/etc_my.cnf.d_network.cnf.j2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/templates/etc_my.cnf.d_server.cnf.j2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/templates/etc_yum.repos.d_mariadb.repo.j2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/vars/Fedora.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/vars/RedHat-8.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb/vars/RedHat.yml" beforeDir="false" />
-    </list>
+    <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +84,7 @@
       <workItem from="1624841147343" duration="7406000" />
       <workItem from="1624852002319" duration="11507000" />
       <workItem from="1625126058906" duration="3556000" />
-      <workItem from="1625188828816" duration="11995000" />
+      <workItem from="1625188828816" duration="12576000" />
     </task>
     <servers />
   </component>
