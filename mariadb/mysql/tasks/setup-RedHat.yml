@@ -1,4 +1,12 @@
 ---
+
+- name: groupadd
+  command: groupadd mysql
+
+- name: useradd
+  command: useradd -g mysql mysql
+
+
 - name: make Directory
   command: chdir=/var/run mkdir mariadb
 
