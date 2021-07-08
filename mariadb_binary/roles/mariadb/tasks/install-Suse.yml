@@ -70,9 +70,10 @@
   file: path=/var/log/mysqld.pid state=touch owner=mysql group=mysql mode=0775
 
 - name: Permission all script
-  file:
-    path: "{{ __mariadb_home }}"/bin
-    mode: 0755
+  command: chdir={{ __mariadb_home }} chown -R mysql .
+
+- name: Permission all group
+  command: chdir={{ __mariadb_home }} chgrp -R mysql .
 
 
 
