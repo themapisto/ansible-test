@@ -1,6 +1,9 @@
 # yum install -y gcc / gcc ++ / make / pcre-devel   --Redhat
 # apt install -y gcc / g++ / make                   --Ubuntu
-# zypper install -y gcc / g++ / make                --SUSE
+# zypper install -y gcc / g++ / make                --SUSE Template에 추가
+
+
+
 # apr / apr-util / pcre / httpd .tar.gz 준비
 #- name: pcre-devel
 #  yum: name=pcre-devel state=present
@@ -9,6 +12,7 @@
   yum:
     name: '*'
     state: latest
+  when: "ansible_os_family == 'Redhat'"
 
 - name: pcre-devel
   yum: name=pcre-devel state=present

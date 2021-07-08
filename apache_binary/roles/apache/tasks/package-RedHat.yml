@@ -1,4 +1,0 @@
-# yum install -y gcc / gcc ++ / make / pcre-devel   --Redhat
-# apr / apr-util / pcre / httpd .tar.gz 준비
-- name: expat-devel
-  command: yum install -y expat-devel

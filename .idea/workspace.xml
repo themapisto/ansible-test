@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/vars/Suse.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apache_binary/roles/apache/vars/Suse.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/tasks/define-home.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/package-Debian.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/package-RedHat.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/total.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/total.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/tasks/total.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/tasks/install-Suse.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,17 +39,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mariadb_binary/roles/mariadb/vars" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mariadb_binary/roles/mariadb/tasks" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mariadb_binary/roles/mariadb/tasks" />
+      <recent name="$PROJECT_DIR$/apache_binary/roles/apache/vars" />
       <recent name="$PROJECT_DIR$/mariadb_binary/roles/mariadb/vars" />
       <recent name="$PROJECT_DIR$/mariadb" />
       <recent name="$PROJECT_DIR$/mariadb/mysql" />
-      <recent name="$PROJECT_DIR$/apache" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -87,7 +94,7 @@
       <workItem from="1624841147343" duration="7406000" />
       <workItem from="1624852002319" duration="11507000" />
       <workItem from="1625126058906" duration="3556000" />
-      <workItem from="1625188828816" duration="19291000" />
+      <workItem from="1625188828816" duration="20765000" />
     </task>
     <servers />
   </component>

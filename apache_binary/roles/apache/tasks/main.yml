@@ -4,5 +4,5 @@
   tags: apache
 
 - name: Install Apache2, Configure Apache2
-  include_tasks: total.yml
+  include_tasks: install-Suse.yml
   tags: apache
