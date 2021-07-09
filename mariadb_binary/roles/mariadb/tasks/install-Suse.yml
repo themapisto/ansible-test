@@ -43,45 +43,36 @@
   - restart mariadb
 ## ncurse / libaio-dev
 ## 템플릿 UBU
-
-
 ## permission denied
-
-
 # 자동생성인듯? 의심
 - name: Create MariaDB log file
   command: chdir=/var/log touch mysqld.log
-
-
 
 - name: make files chmod 0755
   command: chdir=/var/log chmod 755 mysqld.log
 
 - name: chown Directory
-  command: chdir=/var/log chown mysql .
+  command: chdir=/var/log/ chown mysql .
 
 - name: chgrp Directory
-  command: chdir=/var/log chgrp mysql .
-
-
+  command: chdir=/var/log/ chgrp mysql .
 
 - name: make Directory
   command: chdir=/var/lib mkdir mysql
 
 - name: Create MariaDB pid file
   command: chdir={{ __pid }} touch mysqld.pid
+- name: make files chmod 0755
+  command: chdir={{ __pid }} chmod 755 mysqld.pid
 
 - name: chown Directoryexit
-  command: chdir=/var/lib chown mysql mysql
+  command: chdir=/var/lib/ chown mysql mysql
 
 - name: chgrp Directory
-  command: chdir=/var/lib chgrp mysql mysql
+  command: chdir=/var/lib/ chgrp mysql mysql
 
 - name: chmod Directory
   command: chdir=/var/lib chmod 755 mysql
-
-
-
 
 - name: make files 0644
   command: find {{ __mariadb_home }}/bin/ -type f ! -perm 0755 -exec chmod 0755 {} \;
