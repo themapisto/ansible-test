@@ -80,5 +80,5 @@
   command: chdir=/var/lib/mysql/ rm -rf ib*
 
 - name: Start mysqld_safe
-  command: chdir="{{ __mariadb_home }}" ./mysqld_safe --user=mysql &
+  command: chdir={{ __mariadb_home }} ./mysqld_safe --user=mysql &
 
