@@ -56,7 +56,7 @@
   command: chdir=/var/log touch mysqld.pid
 
 - name: make files chmod 0755
-  command: find var/log/ -type f ! -perm 0755 -exec chmod 0755 {} \;
+  command: find /var/log/ -type f ! -perm 0755 -exec chmod 0755 {} \;
 
 
 - name: make Directory
