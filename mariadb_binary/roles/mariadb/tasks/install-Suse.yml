@@ -50,15 +50,14 @@
 
 # 자동생성인듯? 의심
 - name: Create MariaDB log file
-  file:
-    path: /var/log/mysqld.log
-    state: touch
-    mode: '0755'
+  command: chdir=/var/log touch mysqld.log
+
 - name: Create MariaDB pid file
-  file:
-    path: /var/log/mysqld.pid
-    state: touch
-    mode: '0755'
+  command: chdir=/var/log touch mysqld.pid
+
+- name: make files chmod 0755
+  command: find var/log/ -type f ! -perm 0755 -exec chmod 0755 {} \;
+
 
 - name: make Directory
   command: chdir=/var/lib mkdir mysql
