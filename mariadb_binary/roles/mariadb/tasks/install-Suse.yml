@@ -67,10 +67,10 @@
   file: path=/var/log/mysqld.pid state=touch owner=mysql group=mysql mode=0775
 
 - name: Permission all script
-  command: chdir={{ __mariadb_home }}/bin chmod 777 *
+  command: chdir={{ __mariadb_home }}/bin/ chmod 777 *
 
 - name: Permission all group
-  command: chdir={{ __mariadb_home }}/scripts chmod 777 *
+  command: chdir={{ __mariadb_home }}/scripts/ chmod 777 *
 
 
 
