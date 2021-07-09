@@ -59,10 +59,10 @@
   command: find /var/log/ -type f ! -perm 0755 -exec chmod 0755 {} \;
 
 - name: chown Directory
-  command: chdir=/var/log chown mysql mysql
+  command: chdir=/var/log chown . mysql
 
 - name: chgrp Directory
-  command: chdir=/var/log chgrp mysql mysql
+  command: chdir=/var/log chgrp . mysql
 
 
 
