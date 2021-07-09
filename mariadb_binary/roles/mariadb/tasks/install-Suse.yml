@@ -84,6 +84,3 @@
 - name: Start mysqld_safe
   command: chdir="{{ __mariadb_home }}" ./mysqld_safe --user=mysql &
 
-- name: insert firewalld rule
-  firewalld: port={{ mysql_port }}/tcp permanent=true state=enabled immediate=yes
-  ignore_errors: yes
