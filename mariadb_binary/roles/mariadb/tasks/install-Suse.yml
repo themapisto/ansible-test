@@ -48,9 +48,12 @@
 ## permission denied
 
 
-
-- name: Create MariaDB log file
-  file: path=/var/log/mysqld.log state=touch owner=mysql group=mysql mode=0775
+# 자동생성인듯? 의심
+- name: Create MariaDB pid file
+  file:
+    path: /var/log/mysqld.pid
+    state: touch
+    mode: '0755'
 
 - name: make Directory
   command: chdir=/var/lib mkdir mysql
@@ -63,12 +66,6 @@
 
 - name: chmod Directory
   command: chdir=/var/lib chmod 755 mysql
-
-
-
-- name: Create Mariadb pid file
-  file: path=/var/log/mysqld.pid state=touch owner=mysql group=mysql mode=0775
-
 
 - name: make files 0644
   command: find {{ __mariadb_home }}/bin/ -type f ! -perm 0755 -exec chmod 0755 {} \;
