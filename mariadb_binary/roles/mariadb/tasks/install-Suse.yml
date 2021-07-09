@@ -52,8 +52,7 @@
 - name: Create MariaDB log file
   command: chdir=/var/log touch mysqld.log
 
-- name: Create MariaDB pid file
-  command: chdir={{ __pid }} touch mysqld.pid
+
 
 - name: make files chmod 0755
   command: find /var/log/ -type f ! -perm 0755 -exec chmod 0755 {} \;
@@ -69,6 +68,9 @@
 - name: make Directory
   command: chdir=/var/lib mkdir mysql
 
+- name: Create MariaDB pid file
+  command: chdir={{ __pid }} touch mysqld.pid
+
 - name: chown Directoryexit
   command: chdir=/var/lib chown mysql mysql
 
@@ -77,6 +79,9 @@
 
 - name: chmod Directory
   command: chdir=/var/lib chmod 755 mysql
+
+
+
 
 - name: make files 0644
   command: find {{ __mariadb_home }}/bin/ -type f ! -perm 0755 -exec chmod 0755 {} \;
