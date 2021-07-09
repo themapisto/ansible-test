@@ -53,7 +53,7 @@
   command: chdir=/var/log touch mysqld.log
 
 - name: Create MariaDB pid file
-  command: chdir=/var/log touch mysqld.pid
+  command: chdir={{ __pid }} touch mysqld.pid
 
 - name: make files chmod 0755
   command: find /var/log/ -type f ! -perm 0755 -exec chmod 0755 {} \;

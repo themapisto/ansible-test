@@ -2,4 +2,5 @@ __src_tarfile: /opt/apps/mariadb-10.3.20.tar.gz
 __dest_tarfile: /opt/
 __mariadb_src: /usr/local/mariadb-10.3.30-linux-systemd-x86_64
 __mariadb_home: /usr/local/mysql
+__pid: /var/lib/mysql
 mysql_port: 13306
