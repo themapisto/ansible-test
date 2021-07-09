@@ -3,4 +3,5 @@ __dest_tarfile: /opt/
 __mariadb_src: /usr/local/mariadb-10.3.30-linux-systemd-x86_64
 __mariadb_home: /usr/local/mysql
 __pid: /var/lib/mysql
+__pidfile: /var/lib/mysql/mysqld.pid
 mysql_port: 13306

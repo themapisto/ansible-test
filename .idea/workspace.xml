@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/tasks/install-Suse.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/tasks/install-Suse.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/templates/my.cnf.j2" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/templates/my.cnf.j2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/vars/Suse.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/vars/Suse.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +76,7 @@
       <workItem from="1625188828816" duration="20959000" />
       <workItem from="1625724612886" duration="2115000" />
       <workItem from="1625730043430" duration="14613000" />
-      <workItem from="1625817866080" duration="4098000" />
+      <workItem from="1625817866080" duration="4359000" />
     </task>
     <servers />
   </component>
