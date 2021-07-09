@@ -49,6 +49,11 @@
 
 
 # 자동생성인듯? 의심
+- name: Create MariaDB log file
+  file:
+    path: /var/log/mysqld.log
+    state: touch
+    mode: '0755'
 - name: Create MariaDB pid file
   file:
     path: /var/log/mysqld.pid
