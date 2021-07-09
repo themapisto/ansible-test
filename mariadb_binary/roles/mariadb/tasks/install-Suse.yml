@@ -52,10 +52,10 @@
   command: chdir=/var/log chmod 755 mysqld.log
 
 - name: chown Directory
-  command: chdir=/var/log chown mysql .
+  command: chdir=/var/log chown mysql mysqld.log
 
 - name: chgrp Directory
-  command: chdir=/var/log chgrp mysql .
+  command: chdir=/var/log chgrp mysql mysqld.log
 
 - name: make Directory
   command: chdir=/var/lib mkdir mysql
