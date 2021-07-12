@@ -86,8 +86,19 @@
 - name: Delete ibdata.*
   command: chdir=/var/lib/mysql/ rm -rf ib*
 
+## mysql 설치후 엔터를 쳐야되는데,, 엔터가 안쳐져서 문제 해결방법은?
+
 - name: Service script
   command: /bin/cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld
+
+- name: Permission
+  command: chdir=/etc/init.d/ chmod 755 mysqld
+
+- name: Permission
+  command: chdir=/etc/init.d/ chown mysql mysqld
+
+  - name: Permission
+    command: chdir=/etc/init.d/ chgrp mysql mysqld
 
 - name: enable service
   command: /etc/init.d/mysqld start; chkconfig --add mysqld;chkconfig mysqld on
