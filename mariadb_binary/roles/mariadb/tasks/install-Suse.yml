@@ -86,7 +86,12 @@
 - name: Delete ibdata.*
   command: chdir=/var/lib/mysql/ rm -rf ib*
 
-- name: Start mysqld_safe
-  command: chdir={{ __mariadb_home }} ./bin/mysqld_safe --user=mysql &
+- name: Service script
+  command: /bin/cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld
 
+- name: enable service
+  command: /etc/init.d/mysqld start; chkconfig --add mysqld;chkconfig mysqld on
+
+- name: reboot
+  command: reboot
 ## mysql 설치후 엔터를 쳐야되는데,, 엔터가 안쳐져서 문제 해결방법은?
