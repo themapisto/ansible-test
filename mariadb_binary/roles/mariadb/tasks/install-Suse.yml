@@ -103,11 +103,5 @@
 - name: enable service 1
   command: /etc/init.d/mysqld start
 
-- name: enable service 2
-  command: chkconfig --add mysqld
-- name: enable service 3
-  command: chkconfig mysqld on
 
-- name: reboot
-  command: reboot
-## mysql 설치후 엔터를 쳐야되는데,, 엔터가 안쳐져서 문제 해결방법은?
+## mysql 설치후 엔터를 쳐야되는데,, 엔터가 안쳐져서 문제 해결방법은? 서비스에 등록한다. 리부팅한다.
