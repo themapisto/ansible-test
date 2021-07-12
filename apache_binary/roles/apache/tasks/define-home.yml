@@ -1,0 +1,12 @@
+---
+
+# Include variables and define needed variables.
+- name: Include OS-specific variables.
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: Define __apache_home
+  set_fact:
+    tomcat7_home: "{{ __apache_home }}"
+  when: __apache_home is not defined
+
+

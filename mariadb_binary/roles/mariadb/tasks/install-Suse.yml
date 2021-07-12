@@ -41,10 +41,12 @@
   template: src=my.cnf.j2 dest=/etc/my.cnf
   notify:
   - restart mariadb
+
 ## ncurse / libaio-dev
 ## 템플릿 UBU
 ## permission denied
 # 자동생성인듯? 의심
+
 - name: Create MariaDB log file
   command: chdir=/var/log touch mysqld.log
 
@@ -104,4 +106,4 @@
   command: /etc/init.d/mysqld start
 
 
-## mysql 설치후 엔터를 쳐야되는데,, 엔터가 안쳐져서 문제 해결방법은? 서비스에 등록한다. 리부팅한다.
+## mysql 설치후 엔터를 쳐야되는데,, 엔터가 안쳐져서 문제 해결방법은? 서비스에 등록한다.

@@ -1,3 +1,3 @@
 __makefile: /usr/local
 __tarfile: /usr/local/src
-__apache2_home: /usr/local/apache2
+__apache_home: /usr/local/apache2
