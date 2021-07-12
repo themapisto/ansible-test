@@ -100,8 +100,13 @@
 - name: Permission
   command: chdir=/etc/init.d/ chgrp mysql mysqld
 
-- name: enable service
-  command: /etc/init.d/mysqld start; chkconfig --add mysqld;chkconfig mysqld on
+- name: enable service 1
+  command: /etc/init.d/mysqld start
+
+- name: enable service 2
+  command: chkconfig --add mysqld
+- name: enable service 3
+  command: chkconfig mysqld on
 
 - name: reboot
   command: reboot
