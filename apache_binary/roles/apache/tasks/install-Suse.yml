@@ -116,12 +116,12 @@
 
   # cd /usr/local/src/httpd-2.4.29
 
-  # ./configure --prefix=/usr/local/apache2 --enable-modules=most --enable-mods-shared=all --enable-so --with-apr=/usr/local/src/apr-1.6.3 --with-apr-util=/usr/local/src/apr-util-1.6.1
+  # ./configure --prefix=/usr/local/apache --enable-modules=most --enable-mods-shared=all --enable-so --with-apr=/usr/local/src/apr-1.6.3 --with-apr-util=/usr/local/src/apr-util-1.6.1
 
   # make &&  make install
 
 - name: configure
-  command: chdir="{{ __tarfile }}/httpd-2.4.48" ./configure --prefix="{{ __apache2_home }}" --with-apr="{{ __makefile }}/apr" --with-apr-util="{{ __makefile }}/apr-util" --with-pcre="{{ __makefile }}/pcre"
+  command: chdir="{{ __tarfile }}/httpd-2.4.48" ./configure --prefix="{{ __apache_home }}" --with-apr="{{ __makefile }}/apr" --with-apr-util="{{ __makefile }}/apr-util" --with-pcre="{{ __makefile }}/pcre"
     #--with-apr=/usr/local/apr --with-apr-util=/usr/local/apr-util
 
 - name: make && make install
@@ -134,7 +134,7 @@
 
 ## service
 - name: configuration echo Servername
-  command: echo 'ServerName 127.0.0.1:80' >> "{{ __apache2_home }}/conf/httpd.conf"
+  command: echo 'ServerName 127.0.0.1:80' >> "{{ __apache_home }}/conf/httpd.conf"
 
 - name: service start
-  command: chdir="{{ __apache2_home }}/bin/httpd" -k start
+  command: chdir="{{ __apache_home }}/bin/httpd" -k start
