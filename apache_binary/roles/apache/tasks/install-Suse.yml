@@ -133,8 +133,10 @@
 
 
 ## service
-- name: configuration echo Servername
-  command: echo 'ServerName 127.0.0.1:80' >> /usr/local/apache2/conf/httpd.conf
+- name: Create Mysql configuration file
+  template: src=httpd.conf dest={{ __apache_home }}/conf/httpd.conf
+  notify:
+  - restart httpd
 
 - name: service start
   command: chdir="{{ __apache_home }}/bin" httpd -k start
