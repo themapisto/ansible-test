@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/define-home.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/total.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/install-Suse.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache_binary/roles/apache/vars/Suse.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apache_binary/roles/apache/vars/Suse.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/tasks/install-Suse.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mariadb_binary/roles/mariadb/tasks/install-Suse.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/install-Suse.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apache_binary/roles/apache/tasks/install-Suse.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +90,7 @@
       <workItem from="1625730043430" duration="14613000" />
       <workItem from="1625817866080" duration="7560000" />
       <workItem from="1626057880026" duration="4194000" />
-      <workItem from="1626067452899" duration="1491000" />
+      <workItem from="1626067452899" duration="2057000" />
     </task>
     <servers />
   </component>

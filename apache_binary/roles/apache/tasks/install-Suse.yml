@@ -76,6 +76,8 @@
 
 - name: yum install expat-devel
   yum: name=expat-devel state=present
+  when: "ansible_os_family == 'Redhat'"
+
 
 - name: apr configure
   command: chdir="{{ __tarfile }}/apr-1.7.0" ./configure --prefix="{{ __makefile }}/apr"
