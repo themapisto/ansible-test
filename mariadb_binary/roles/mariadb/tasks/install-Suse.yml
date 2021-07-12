@@ -87,5 +87,6 @@
   command: chdir=/var/lib/mysql/ rm -rf ib*
 
 - name: Start mysqld_safe
-  command: chdir={{ __mariadb_home }} ./bin/mysqld_safe --user=mysql &
+  command: chdir={{ __mariadb_home }} ./bin/mysqld_safe --user=mysql 2>&1
 
+## mysql 설치후 엔터를 쳐야되는데,, 엔터가 안쳐져서 문제 해결방법은?
