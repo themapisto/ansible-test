@@ -134,7 +134,7 @@
 
 ## service
 - name: configuration echo Servername
-  command: echo 'ServerName 127.0.0.1:80' >> "{{ __apache_home }}/conf/httpd.conf"
+  command: echo 'ServerName 127.0.0.1:80' >> {{ __apache_home }}/conf/httpd.conf
 
 - name: service start
   command: chdir="{{ __apache_home }}/bin/httpd" -k start
