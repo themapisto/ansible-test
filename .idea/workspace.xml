@@ -4,7 +4,6 @@
     <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apache_binary/roles/apache/templates/httpd.conf" beforeDir="false" afterPath="$PROJECT_DIR$/apache_binary/roles/apache/templates/httpd.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site.yml" beforeDir="false" afterPath="$PROJECT_DIR$/common/site.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +94,7 @@
       <workItem from="1625817866080" duration="7560000" />
       <workItem from="1626057880026" duration="4194000" />
       <workItem from="1626067452899" duration="6900000" />
-      <workItem from="1626141713627" duration="2329000" />
+      <workItem from="1626141713627" duration="3229000" />
     </task>
     <servers />
   </component>
