@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/common/roles/common/tasks/define-home.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/roles/common/tasks/install-Redhat.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/roles/common/tasks/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache_binary/roles/apache/templates/httpd.conf" beforeDir="false" afterPath="$PROJECT_DIR$/apache_binary/roles/apache/templates/httpd.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/tasks/install-Suse.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat_binary/roles/tomcat/tasks/install-Suse.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +97,7 @@
       <workItem from="1625817866080" duration="7560000" />
       <workItem from="1626057880026" duration="4194000" />
       <workItem from="1626067452899" duration="6900000" />
-      <workItem from="1626141713627" duration="3229000" />
+      <workItem from="1626141713627" duration="5462000" />
     </task>
     <servers />
   </component>
