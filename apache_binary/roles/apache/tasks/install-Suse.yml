@@ -133,10 +133,10 @@
 
 
 ## service
-- name: Create Mysql configuration file
-  template: src=httpd.conf dest={{ __apache_home }}/conf/httpd.conf
-  notify:
-  - restart httpd
+#- name: Create Mysql configuration file
+#  template: src=httpd.conf dest={{ __apache_home }}/conf/httpd.conf
+#  notify:
+#  - restart httpd
 
 - name: service start
   command: chdir="{{ __apache_home }}/bin" httpd -k start
