@@ -21,7 +21,15 @@
 
 - name: Show ansible_facts
   debug:
-    var: __src_tarfile
+    var: backup__hosts_file
+
+- name: Insert configuration block
+  lineinfile:
+    path: "{{ item.path }}"
+    backup: yes
+    line: "{{ item.value }}"
+  loop:
+    - { path: /etc/hosts,  value: {{ backup__hosts_file }} }
 
 
 

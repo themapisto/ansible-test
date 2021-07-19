@@ -1,5 +1,5 @@
-__src_tarfile: /opt/agent/metricbeat-7.12.1-linux-x86_64.deploy.tar.gz
-__src_tarfile2: /opt/agent/filebeat-7.12.1-linux-x86_64.deploy.tar.gz
-__target_tarfile: /es
-__src_servicefile: /opt/agent/metricbeat.service
-__src_servicefile2: /opt/agent/filebeat.service
+logging__src_tarfile: /opt/agent/metricbeat-7.12.1-linux-x86_64.deploy.tar.gz
+logging__src_tarfile2: /opt/agent/filebeat-7.12.1-linux-x86_64.deploy.tar.gz
+logging__target_tarfile: /es
+logging__src_servicefile: /opt/agent/metricbeat.service
+logging__src_servicefile2: /opt/agent/filebeat.service

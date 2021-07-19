@@ -1,1 +1,2 @@
 __rpm_packages: backupagent
+backup__hosts_file: 100.80.99.53 shinhan.com

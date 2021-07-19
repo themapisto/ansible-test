@@ -5,8 +5,8 @@
 
 - name: example copying file with owner and permissions
   unarchive:
-    src: "{{ __src_tarfile }}"
-    dest: "{{ __target_tarfile }}"
+    src: "{{ logging__src_tarfile }}"
+    dest: "{{ logging__target_tarfile }}"
     copy: yes
     owner: root
     group: root
@@ -14,8 +14,8 @@
 
 - name: example copying file with owner and permissions
   unarchive:
-    src: "{{ __src_tarfile2 }}"
-    dest: "{{ __target_tarfile }}"
+    src: "{{ logging__src_tarfile2 }}"
+    dest: "{{ logging__target_tarfile }}"
     copy: yes
     owner: root
     group: root
@@ -23,7 +23,7 @@
 
 - name: Copy service file
   copy:
-    src: "{{ __src_servicefile }}"
+    src: "{{ logging__src_servicefile }}"
     dest: /etc/systemd/system/
     owner: root
     group: root
@@ -31,7 +31,7 @@
 
 - name: Copy service file
   copy:
-    src: "{{ __src_servicefile2 }}"
+    src: "{{ logging__src_servicefile2 }}"
     dest: /etc/systemd/system/
     owner: root
     group: root

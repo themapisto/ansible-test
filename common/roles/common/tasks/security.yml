@@ -2,7 +2,7 @@
 ## 백신 설치
 - name: Copying vaccine
   unarchive:
-    src: "{{ __src_tarfile }}"
+    src: "{{ security__src_tarfile }}"
     dest: /
     copy: yes
     owner: root
@@ -15,7 +15,7 @@
 ## 로그세이버 설치
 - name: Logsaver Copying and Unarchive
   unarchive:
-    src: "{{ __src_tarfile2 }}"
+    src: "{{ security__src_tarfile2 }}"
     dest: /
     copy: yes
     owner: root
@@ -27,7 +27,7 @@
 
 - name: Tior Agent Copying and Unarchive
   unarchive:
-    src: "{{ __src_tarfile3 }}"
+    src: "{{ security__src_tarfile3 }}"
     dest: /
     copy: yes
     owner: root
