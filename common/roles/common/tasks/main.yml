@@ -1,6 +1,6 @@
 ---
 - include: "define-home.yml"
-#- include: "osConfigure.yml"
-#- include: "logging.yml"
-#- include: "backup.yml"
-#- include: "security.yml"
+- include: "osConfigure.yml"
+- include: "logging.yml"
+- include: "backup.yml"
+- include: "security.yml"

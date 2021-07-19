@@ -1,2 +1,4 @@
 __rpm_packages: backupagent
-backup__hosts_file: 100.80.99.53 shinhan.com
+backup__hosts_file: 100.80.99.185 shbavm.gcds.shinhan.com
+backup__hosts_file2: 100.80.12.200 DD6900.gcds.shinhan.com.local DD6900
+backup__domain: shbavm.gcds.shinhan.com

@@ -37,3 +37,6 @@
 - name: Start Script
   command: ./tior_inst/install.sh
 
+### Logsaver ,Tior agent 설치시
+### interrupt 화면 생성시 해결방법 없음
+### test 진행 예정

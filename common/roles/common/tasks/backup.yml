@@ -11,16 +11,12 @@
     backup: yes
     line: "{{ item.value }}"
   loop:
-    - { path: /etc/pam.d/password-auth,  value:  }
+    - { path: /etc/hosts,  value: "{{ backup__hosts_file }}" }
+    - { path: /etc/hosts,  value: "{{ backup__hosts_file }}" }
 
 
+- name: Start Script
+  command: /usr/local/avamar/etc/avagent.d/register "{{ backup_domain }}" /clients
 
-- name:  Replace the etc/hosts
-  replace:
-    path: /etc/hosts
-    regexp: "{{ item.before }}"
-    replace:  "{{ item.after }}"
-  loop:
-    - { before: '# minlen = 9', after: 'minlen = 8' }
-
-
+- name: Service Start
+  command: /etc/rc.d/init.d/avagent start

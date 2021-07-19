@@ -8,28 +8,9 @@
     - security.yml
     - backup.yml
 
-- name: Create a directory if it does not exist
-  become: yes
-  file:
-    path: "{{ item }}"
-    state: directory
-    mode: 0755
-    recurse: yes
-  loop:
-    - /es
-    - /backup_agent
 
-- name: Show ansible_facts
-  debug:
-    var: backup__hosts_file
 
-- name: Insert configuration block
-  lineinfile:
-    path: "{{ item.path }}"
-    backup: yes
-    line: "{{ item.value }}"
-  loop:
-    - { path: /etc/hosts,  value: "{{ backup__hosts_file }}" }
+
 
 
 
