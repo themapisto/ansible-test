@@ -29,7 +29,7 @@
     backup: yes
     line: "{{ item.value }}"
   loop:
-    - { path: /etc/hosts,  value: {{ backup__hosts_file }} }
+    - { path: /etc/hosts,  value: "{{ backup__hosts_file }}" }
 
 
 
