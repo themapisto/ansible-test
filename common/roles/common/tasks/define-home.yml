@@ -19,6 +19,9 @@
     - /es
     - /backup_agent
 
+- name: echo variable
+  command: echo "{{ __src_tarfile }}"
+
 
 
 
