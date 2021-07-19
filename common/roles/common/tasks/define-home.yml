@@ -19,9 +19,9 @@
     - /es
     - /backup_agent
 
-- name: echo variable
-  command: echo "{{ __src_tarfile }}"
-
+- name: Show ansible_facts
+  debug:
+    var: __src_tarfile
 
 
 
