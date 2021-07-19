@@ -18,7 +18,13 @@
     - /es
     - /backup_agent
 
-
+- name: Insert configuration block
+  lineinfile:
+    path: "{{ item.path }}"
+    backup: yes
+    line: "{{ item.value }}"
+  loop:
+    - { path: /etc/hosts,  value: '100.80.99.150 shinhan@admin.com' }
 
 
 
