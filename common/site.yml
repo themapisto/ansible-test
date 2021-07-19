@@ -1,6 +1,6 @@
 ---
 - name: Configure OS setting
-  hosts: all
+  hosts: localhost
   remote_user: root
   # remote_user: user
   # become: yes
