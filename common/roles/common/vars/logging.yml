@@ -1,0 +1,5 @@
+__src_tarfile: /opt/apps/metricbeat-7.12.1-linux-x86_64.deploy.tar.gz
+__src_tarfile2: /opt/apps/filebeat-7.12.1-linux-x86_64.deploy.tar.gz
+__target_tarfile: /es
+__src_servicefile: /opt/apps/metricbeat.service
+__src_servicefile2: /opt/apps/filebeat.service

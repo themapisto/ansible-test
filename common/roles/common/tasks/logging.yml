@@ -1,0 +1,66 @@
+---
+# This playbook will unarchive logging agent and give permissions.
+
+- name: mkdir /es
+  command: mkdir /es
+
+- name: example copying file with owner and permissions
+  unarchive:
+    src: "{{ __src_tarfile }}"
+    dest: "{{ __target_tarfile }}"
+    copy: yes
+    owner: root
+    group: root
+    mode: 0755
+
+- name: example copying file with owner and permissions
+  unarchive:
+    src: "{{ __src_tarfile2 }}"
+    dest: "{{ __target_tarfile }}"
+    copy: yes
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Copy service file
+  copy:
+    src: "{{ __src_servicefile }}"
+    dest: /etc/systemd/system/
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Copy service file
+  copy:
+    src: "{{ __src_servicefile2 }}"
+    dest: /etc/systemd/system/
+    owner: root
+    group: root
+    mode: 0755
+
+- name: daemon -reload
+  command: systemctl daemon-reload
+
+- name: enable service
+  command: systemctl enable metricbeat
+
+- name: start service
+  command: systemctl start merticbeat
+
+
+
+## mkdir /es
+## metricbeat-7.12.1-linux-x86_64.deploy.tar.gz  target ==> /es/
+## filebeat-7.12.1-linux-x86_64.deploy.tar.gz target ==> /es/
+## metricbeat.service target ==> /etc/systemd/system/
+## filebeat.service target ==> /etc/systemd/system/
+
+## unarchive
+## root permission /es/metricbeat
+## root permission /es/filebeat
+
+## service file root permission metricbeat.service
+## service file root permission filebeat.service
+
+### daemon -reload
+### enable, start service ( metricbeat.service )

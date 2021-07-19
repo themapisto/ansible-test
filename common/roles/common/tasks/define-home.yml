@@ -1,0 +1,8 @@
+---
+
+# Include variables and define needed variables.
+- name: Include variables
+  include_vars:
+    - logging.yml
+    - security.yml
+    - backup.yml
