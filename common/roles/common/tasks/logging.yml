@@ -1,8 +1,7 @@
 ---
 # This playbook will unarchive logging agent and give permissions.
 
-- name: mkdir /es
-  command: mkdir /es
+# make a directory -> define-home.yml
 
 - name: example copying file with owner and permissions
   unarchive:

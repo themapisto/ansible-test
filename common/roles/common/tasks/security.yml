@@ -1,10 +1,39 @@
 ---
-
-- name: example copying file with owner and permissions
+## 백신 설치
+- name: Copying vaccine
   unarchive:
     src: "{{ __src_tarfile }}"
-    dest: /usr/local
+    dest: /
     copy: yes
     owner: root
     group: root
-    mode: 0644
+    mode: 0755
+
+- name: Start Script
+  command: ./AgentDeploymentScript.sh
+
+## 로그세이버 설치
+- name: Logsaver Copying and Unarchive
+  unarchive:
+    src: "{{ __src_tarfile2 }}"
+    dest: /
+    copy: yes
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Start Script
+  command: ./logsaver/install.sh
+
+- name: Tior Agent Copying and Unarchive
+  unarchive:
+    src: "{{ __src_tarfile3 }}"
+    dest: /
+    copy: yes
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Start Script
+  command: ./tior_inst/install.sh
+

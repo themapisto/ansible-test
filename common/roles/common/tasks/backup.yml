@@ -1,0 +1,6 @@
+---
+- name: install backup agent
+  command: rpm -ivh {{ __rpm_packages }}
+
+## host file /etc/hosts 수정
+- name: file copy
