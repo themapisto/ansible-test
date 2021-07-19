@@ -1,11 +1,12 @@
 ---
 
 # Include variables and define needed variables.
-#- name: Include variables
-#  include_vars:
-#    - logging.yml
-#    - security.yml
-#    - backup.yml
+- name: Include variables
+  include_vars: "{{ item }}"
+  loop:
+    - logging.yml
+    - security.yml
+    - backup.yml
 
 - name: Create a directory if it does not exist
   become: yes
@@ -18,23 +19,6 @@
     - /es
     - /backup_agent
 
-- name: Insert configuration block
-  lineinfile:
-    path: "{{ item.path }}"
-    backup: yes
-    line: "{{ item.value }}"
-  loop:
-    - { path: /etc/hosts,  value: '100.80.99.150 shinhan@admin.com' }
 
-
-
-- name:  Replace the hosts file
-  become: yes
-  replace:
-    path: /etc/hosts
-    regexp: "{{ item.before }}"
-    replace:  "{{ item.after }}"
-  loop:
-    - { before: '172.10.0.118', after: '172.15.0.118' }
 
 
