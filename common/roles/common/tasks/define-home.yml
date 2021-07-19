@@ -35,6 +35,6 @@
     regexp: "{{ item.before }}"
     replace:  "{{ item.after }}"
   loop:
-    - { before: '#Banner none', after: 'Banner \/etc\/issue.net' }
+    - { before: '172.10.0.118', after: '172.15.0.118' }
 
 
