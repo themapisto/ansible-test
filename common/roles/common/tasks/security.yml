@@ -1,0 +1,10 @@
+---
+
+- name: example copying file with owner and permissions
+  unarchive:
+    src: "{{ __src_tarfile }}"
+    dest: /usr/local
+    copy: yes
+    owner: root
+    group: root
+    mode: 0644
