@@ -8,15 +8,13 @@
     - security.yml
     - backup.yml
 
-- name: What is blockinfile
-  blockinfile:
+- name: Replace between the expressions (requires Ansible >= 2.4)
+  ansible.builtin.replace:
     path: /etc/hosts
-    block: |
-      172.10.0.115 jhoh.local
-      172.10.0.166 hspark.local
-    marker: "## {mark} ANSIBLE MANAGED BLOCK ##"
-    backup: yes
-
+    after: '<VirtualHost [*]>'
+    before: '</VirtualHost>'
+    regexp: '^(.+)$'
+    replace: '# \1'
 
 
 
