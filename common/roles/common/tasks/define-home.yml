@@ -13,6 +13,8 @@
     name: redhat
     description: EPEL YUM repo
     baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+    gpgcheck: no
+    enabled: no
 
 
 
