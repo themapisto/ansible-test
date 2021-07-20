@@ -11,10 +11,8 @@
 - name: Replace between the expressions (requires Ansible >= 2.4)
   ansible.builtin.replace:
     path: /etc/hosts
-    after: '<VirtualHost [*]>'
-    before: '</VirtualHost>'
-    regexp: '^(.+)$'
-    replace: '# \1'
+    regexp: '^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$'
+    replace: '172.10.10.10'
 
 
 
