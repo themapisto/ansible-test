@@ -15,6 +15,7 @@
       172.10.0.115 kpkim.local
       172.10.0.166 hspark.local
     marker: "## {mark} ANSIBLE MANAGED BLOCK ##"
+    backup: yes
 
 
 
