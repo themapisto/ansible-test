@@ -6,7 +6,7 @@
 
 - name: Define __mariadb_home
   set_fact:
-    tomcat7_home: "{{ __mariadb_home }}"
-  when: tomcat7_home is not defined
+    mariadb_home: "{{ __mariadb_home }}"
+  when: mariadb_home is not defined
 
 
