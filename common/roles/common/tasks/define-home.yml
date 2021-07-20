@@ -10,7 +10,7 @@
 
 - name: Add repository
   yum_repository:
-    name: epel
+    name: redhat
     description: EPEL YUM repo
     baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
 
