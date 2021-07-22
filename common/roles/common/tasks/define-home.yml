@@ -1,7 +1,7 @@
 ---
 
 - name: service module test
-  ansible.builtin.service:
+  systemd:
     name: mysqld
     state: started
 
