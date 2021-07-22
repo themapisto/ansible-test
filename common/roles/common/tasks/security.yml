@@ -25,6 +25,9 @@
 - name: Start Script
   command: ./logsaver/install.sh
 
+### script 실행 시 install 간의 interupt 창 발생
+
+
 - name: Tior Agent Copying and Unarchive
   unarchive:
     src: "{{ security__src_tarfile3 }}"
