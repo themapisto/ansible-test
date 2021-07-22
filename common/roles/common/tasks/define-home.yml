@@ -3,7 +3,7 @@
 - name: service module test
   ansible.builtin.service:
     name: mysqld
-    state: stopped
+    state: started
 
 
 ## mysql 설치후 엔터를 쳐야되는데,, 엔터가 안쳐져서 문제 해결방법은? 서비스에 등록한다.
