@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/roles/common/vars/kp.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/roles/common/tasks/define-home.yml" beforeDir="false" afterPath="$PROJECT_DIR$/common/roles/common/tasks/define-home.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/roles/common/tasks/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/common/roles/common/tasks/security.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/roles/common/vars/backup.yml" beforeDir="false" afterPath="$PROJECT_DIR$/common/roles/common/vars/backup.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/roles/common/templates/my.cnf.j2" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,17 +31,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/apache_binary/roles/apache/tasks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/roles/common/templates" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/common/roles/common/templates" />
       <recent name="$PROJECT_DIR$/apache_binary/roles/apache/tasks" />
       <recent name="$PROJECT_DIR$/mariadb_binary/roles/mariadb/tasks" />
       <recent name="$PROJECT_DIR$/apache_binary/roles/apache/vars" />
       <recent name="$PROJECT_DIR$/mariadb_binary/roles/mariadb/vars" />
-      <recent name="$PROJECT_DIR$/mariadb" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/common" />
@@ -99,7 +95,7 @@
       <workItem from="1626067452899" duration="6900000" />
       <workItem from="1626141713627" duration="30588000" />
       <workItem from="1626746840865" duration="11389000" />
-      <workItem from="1626844193821" duration="3095000" />
+      <workItem from="1626844193821" duration="3311000" />
     </task>
     <servers />
   </component>
