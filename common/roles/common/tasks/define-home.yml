@@ -2,8 +2,8 @@
 
 - name: service module test
   systemd:
-    name: mysqld
-    state: started
+    name: network
+    state: stopped
 
 
 ## mysql 설치후 엔터를 쳐야되는데,, 엔터가 안쳐져서 문제 해결방법은? 서비스에 등록한다.

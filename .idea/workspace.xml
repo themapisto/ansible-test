@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9a885ea8-d0f1-49e8-aafd-55bdefb972e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/roles/common/tasks/define-home.yml" beforeDir="false" afterPath="$PROJECT_DIR$/common/roles/common/tasks/define-home.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +96,7 @@
       <workItem from="1626067452899" duration="6900000" />
       <workItem from="1626141713627" duration="30588000" />
       <workItem from="1626746840865" duration="11389000" />
-      <workItem from="1626844193821" duration="12501000" />
+      <workItem from="1626844193821" duration="13210000" />
     </task>
     <servers />
   </component>
