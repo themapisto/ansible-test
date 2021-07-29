@@ -1,13 +1,7 @@
 ---
 
-- name: service module test
-  systemd:
-    name: network
-    state: stopped
-
-
-## mysql 설치후 엔터를 쳐야되는데,, 엔터가 안쳐져서 문제 해결방법은? 서비스에 등록한다.
-
-
-
-
+- name: Replace between the expressions (requires Ansible >= 2.4)
+  ansible.builtin.replace:
+    path: /etc/hosts
+    regexp: '^shinhan'
+    replace: "ShinhanCBO"

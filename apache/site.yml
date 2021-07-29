@@ -1,5 +1,5 @@
 ---
-- name: Install Mariadb
+- name: Install Apache
   hosts: all
   remote_user: root
   # remote_user: user
