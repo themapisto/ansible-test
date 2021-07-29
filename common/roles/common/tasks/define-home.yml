@@ -3,5 +3,5 @@
 - name: Replace between the expressions (requires Ansible >= 2.4)
   ansible.builtin.replace:
     path: /etc/hosts
-    regexp: '^shinhan'
-    replace: 'ShinhanCBO'
+    regexp: '(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}'
+    replace: '172.10.0.20'
