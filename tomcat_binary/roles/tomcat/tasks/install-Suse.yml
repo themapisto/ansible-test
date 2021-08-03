@@ -55,8 +55,6 @@
     owner: tomcat
     group: tomcat
     mode: "755"
-  notify: restart tomcat
-
 
 - name: Run a script with arguments (free form)
   ansible.builtin.script: "{{ __tomcat7_home }}/bin/startup.sh
